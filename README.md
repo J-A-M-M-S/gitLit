@@ -70,7 +70,7 @@ SO THAT I don't have to make my own decision
 <h3>Marlon Mora</h3>
 <ul>
     <li><a href='https://github.com/marlon20m'>GitHub</a></li>
-    <li><a href='#' target='_blank'>https://www.linkedin.com/in/giraldo-marlon/</a></li>
+    <li><a href='https://www.linkedin.com/in/giraldo-marlon/' target='_blank'>LinkedIn</a></li>
     <li>marlonmora.ndr@gmail.com</li>
 </ul>
 <h3>Joshua Bogart</h3>
