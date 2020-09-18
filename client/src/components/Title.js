@@ -1,8 +1,7 @@
-import React from "react"
+import React from "react";
 
 const Title = () => {
-    return <h1>gitLit</h1>
-}
+  return <h1>gitLit</h1>;
+};
 
-
-export default Title
+export default Title;
