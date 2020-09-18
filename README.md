@@ -55,7 +55,7 @@ SO THAT I don't have to make my own decision
     <li><a href='https://www.linkedin.com/in/ashleylerma/' target='_blank'>LinkedIn</a></li> 
     <li>lerma.scout@gmail.com</li> 
 </ul>
-<h3>Dre Lajara</h3>
+<h3>Dre Lajaras</h3>
 <ul>
     <li><a href='https://github.com/juanlajara/juanlajara.github.io' target='_blank'>GitHub</a></li>
     <li><a href='https://www.linkedin.com/in/juan-andres-lajara-179a8442' target='_blank'>LinkedIn</a></li>
