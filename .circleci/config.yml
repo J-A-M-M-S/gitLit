@@ -1,4 +1,7 @@
 version: 2
+dependencies:
+  pre:
+    - npm install -g npm
 jobs:
   build:
     docker:
@@ -9,7 +12,7 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Setup Dependencies
-          command: npm install -g npm
+          command: npm install
       - run:
           name: Setup Code Climate test-reporter
           command: |
