@@ -12,9 +12,7 @@
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build",
-    "test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit",
-    "lint": "eslint \"**/*.js\"",
-    "fix": "eslint --fix ."
+    "test": "cross-env && jest --coverage"
   },
   "author": "",
   "license": "ISC",
