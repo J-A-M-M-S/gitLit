@@ -1,15 +1,12 @@
 version: 2
-dependencies:
-  pre:
-    - npm install -g npm
 jobs:
   build:
     docker:
-      - image: circleci/node:6
+      - image: circleci/node:8
     steps:
       - checkout
       - restore_cache: # special step to restore the dependency cache
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
       - run:
           name: Setup Dependencies
           command: npm install
@@ -19,11 +16,11 @@ jobs:
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
             chmod +x ./cc-test-reporter
       - save_cache: # special step to save the dependency cache
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
           paths:
             - ./node_modules
-      - run: # run tests
-          name: Run Test and Coverage
+      - run: # run frontend and backend tests
+          name: Run frontend and backend tests and coverage
           command: |
             ./cc-test-reporter before-build
             npm test -- --coverage
