@@ -6,54 +6,54 @@ import LogoutButton from "./logoutButton";
 import LoginButton from "./loginButton";
 
 const MainNav = () => (
-	<Nav className="mr-auto">
-		<Nav.Link
-			as={RouterNavLink}
-			to="/"
-			exact
-			activeClassName="router-link-exact-active"
-		>
-			Home
-		</Nav.Link>
-		<Nav.Link
-			as={RouterNavLink}
-			to="/profile"
-			exact
-			activeClassName="router-link-exact-active"
-		>
-			Profile
-		</Nav.Link>
-		<Nav.Link
-			as={RouterNavLink}
-			to="/external-api"
-			exact
-			activeClassName="router-link-exact-active"
-		>
-			External API
-		</Nav.Link>
-	</Nav>
+  <Nav className="mr-auto">
+    <Nav.Link
+      as={RouterNavLink}
+      to="/"
+      exact
+      activeClassName="router-link-exact-active"
+    >
+      Home
+    </Nav.Link>
+    <Nav.Link
+      as={RouterNavLink}
+      to="/profile"
+      exact
+      activeClassName="router-link-exact-active"
+    >
+      Profile
+    </Nav.Link>
+    <Nav.Link
+      as={RouterNavLink}
+      to="/external-api"
+      exact
+      activeClassName="router-link-exact-active"
+    >
+      External API
+    </Nav.Link>
+  </Nav>
 );
 
 const AuthNav = () => {
-	const { isAuthenticated } = useAuth0();
+  const { isAuthenticated } = useAuth0();
 
-	return (
-		<Nav className="justify-content-end">
-			{isAuthenticated ? <LogoutButton /> : <LoginButton />}
-		</Nav>
-	);
+  return (
+    <Nav className="justify-content-end">
+      {isAuthenticated ? <LogoutButton /> : <LoginButton />}
+    </Nav>
+  );
 };
 
 const NavBar = () => {
-	return (
-		<Navbar bg="light" expand="md">
-			<Container>
-				<Navbar.Brand as={RouterNavLink} className="logo" to="/" />
-				<MainNav />
-				<AuthNav />
-			</Container>
-		</Navbar>
-	);
+  return (
+    <Navbar bg="light" expand="md">
+      <Container>
+        <Navbar.Brand as={RouterNavLink} className="logo" to="/" />
+        <MainNav />
+        <AuthNav />
+      </Container>
+    </Navbar>
+  );
 };
 
 export default NavBar;
