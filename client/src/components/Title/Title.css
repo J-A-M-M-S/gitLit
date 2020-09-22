@@ -1,4 +1,5 @@
 .header {
+  display: flex;
   justify-content: center;
   color: rgb(107, 16, 16);
   background-color: black;
