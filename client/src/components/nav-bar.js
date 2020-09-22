@@ -16,7 +16,7 @@ const MainNav = () => (
         <Link
           as={RouterNavLink}
           to="/"
-          exact
+          exact="true"
           className="router-link-exact-active"
         >
           Home
