@@ -1,5 +1,5 @@
 import React from "react";
-import Title from "./components/Title/Title";
+import Title from "./components/Title";
 import { Route, Switch } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { NavBar, Footer, Loading, PrivateRoute } from "./components";
