@@ -2,15 +2,16 @@ import React from "react";
 import { NavLink as RouterNavLink } from "react-router-dom";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { useAuth0 } from "@auth0/auth0-react";
-import LogoutButton from "../components/logoutButton";
-import LoginButton from "../components/loginButton";
+import LogoutButton from "./logoutButton";
+import LoginButton from "./loginButton";
+import "./Nav-bar.css";
 
 const MainNav = () => (
   <Navbar expand="lg">
   <Navbar.Brand href="/home">gitLit</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
-  <Nav className="mr-auto">
+  <Nav className="mr-auto" style={{justifyContent: "left"}}>
     <Nav.Link
       as={RouterNavLink}
       to="/"
@@ -68,7 +69,7 @@ const AuthNav = () => {
 
 const NavBar = () => {
   return (
-    <Navbar expand="md" style={{backgroundColor: "maroon"}}>
+    <Navbar expand="md" className="fullbar">
       <Container>
         <Navbar.Brand as={RouterNavLink} className="logo" to="/" />
         <MainNav />
