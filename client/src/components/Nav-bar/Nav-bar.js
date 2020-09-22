@@ -8,53 +8,53 @@ import "./Nav-bar.css";
 
 const MainNav = () => (
   <Navbar expand="lg">
-  <Navbar.Brand href="/home">gitLit</Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav">
-  <Nav className="mr-auto" style={{justifyContent: "left"}}>
-    <Nav.Link
-      as={RouterNavLink}
-      to="/"
-      exact
-      activeClassName="router-link-exact-active"
-    >
-      Home
-    </Nav.Link>
-    <Nav.Link
-      as={RouterNavLink}
-      to="/profile"
-      exact
-      activeClassName="router-link-exact-active"
-    >
-      Profile
-    </Nav.Link>
-    <Nav.Link
-      as={RouterNavLink}
-      to="/mixology"
-      exact
-      activeClassName="router-link-exact-active"
-    >
-      Mixology
-    </Nav.Link>
-    <Nav.Link
-      as={RouterNavLink}
-      to="/drinksearch"
-      exact
-      activeClassName="router-link-exact-active"
-    >
-      Drink Search
-    </Nav.Link>
-    <Nav.Link
-      as={RouterNavLink}
-      to="/roulette"
-      exact
-      activeClassName="router-link-exact-active"
-    >
-      Roulette
-    </Nav.Link>
-  </Nav>
-  </Navbar.Collapse>
-</Navbar>
+    <Navbar.Brand href="/home">gitLit</Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="mr-auto" style={{ justifyContent: "left" }}>
+        <Nav.Link
+          as={RouterNavLink}
+          to="/"
+          exact
+          activeClassName="router-link-exact-active"
+        >
+          Home
+        </Nav.Link>
+        <Nav.Link
+          as={RouterNavLink}
+          to="/profile"
+          exact
+          activeClassName="router-link-exact-active"
+        >
+          Profile
+        </Nav.Link>
+        <Nav.Link
+          as={RouterNavLink}
+          to="/mixology"
+          exact
+          activeClassName="router-link-exact-active"
+        >
+          Mixology
+        </Nav.Link>
+        <Nav.Link
+          as={RouterNavLink}
+          to="/drinksearch"
+          exact
+          activeClassName="router-link-exact-active"
+        >
+          Drink Search
+        </Nav.Link>
+        <Nav.Link
+          as={RouterNavLink}
+          to="/roulette"
+          exact
+          activeClassName="router-link-exact-active"
+        >
+          Roulette
+        </Nav.Link>
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
 );
 
 const AuthNav = () => {
