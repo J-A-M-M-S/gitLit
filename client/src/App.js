@@ -21,6 +21,8 @@ const App = () => {
           <Route path="/" exact component={Home} />
           <PrivateRoute path="/profile" component={Profile} />
           <Route path="/external-api" component={ExternalApi} />
+          {/* <Route exact="true" path ={["/","/home"]} component={Home} />
+          <Route exact="true" path ={["/profile"]} component={Profile} /> */}
         </Switch>
       </Container>
       <Footer />
