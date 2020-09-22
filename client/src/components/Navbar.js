@@ -9,7 +9,11 @@ import "./Navbar.css";
 const MainNav = () => (
   <Navbar expand="lg">
     {/*ERROR gitlit brand logo clicks and signs out of login" */}
-    <Navbar.Brand href="/">gitLit</Navbar.Brand>
+    <Navbar.Brand   
+          as={RouterNavLink}
+          to="/"
+          exact="true"
+          className="router-link-exact-active">gitLit</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto" style={{ justifyContent: "left" }}>
