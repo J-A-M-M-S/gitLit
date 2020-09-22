@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import Navbar from "./Nav-bar";
+import Navbar from "./Navbar.js";
 import {BrowserRouter as Router} from "react-router-dom";
 
 describe("Navbar tab Profile", () => {

@@ -4,7 +4,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "./logoutButton";
 import LoginButton from "./loginButton";
-import "./Nav-bar.css";
+import "./Navbar.css";
  
 const MainNav = () => (
   <Navbar expand="lg">
