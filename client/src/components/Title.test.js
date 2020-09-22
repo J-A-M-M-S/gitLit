@@ -7,7 +7,7 @@ import "@testing-library/jest-dom/extend-expect";
 import Title from "./Title";
 
 describe("Table", () => {
-  test("loads and displays title of app", async () => {
+  test("loads and displays title of app", () => {
     // Arrange
     const { container } = render(<Title />);
     // Act - user is not interacting with this
