@@ -2,10 +2,14 @@ import React from "react";
 import { NavLink as RouterNavLink } from "react-router-dom";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { useAuth0 } from "@auth0/auth0-react";
-import LogoutButton from "./logoutButton";
-import LoginButton from "./loginButton";
+import LogoutButton from "../components/logoutButton";
+import LoginButton from "../components/loginButton";
 
 const MainNav = () => (
+  <Navbar bg="light" expand="lg">
+  <Navbar.Brand href="/home">gitLit</Navbar.Brand>
+  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+  <Navbar.Collapse id="basic-navbar-nav">
   <Nav className="mr-auto">
     <Nav.Link
       as={RouterNavLink}
@@ -25,13 +29,31 @@ const MainNav = () => (
     </Nav.Link>
     <Nav.Link
       as={RouterNavLink}
-      to="/external-api"
+      to="/mixology"
       exact
       activeClassName="router-link-exact-active"
     >
-      External API
+      Mixology
+    </Nav.Link>
+    <Nav.Link
+      as={RouterNavLink}
+      to="/drinksearch"
+      exact
+      activeClassName="router-link-exact-active"
+    >
+      Drink Search
+    </Nav.Link>
+    <Nav.Link
+      as={RouterNavLink}
+      to="/roulette"
+      exact
+      activeClassName="router-link-exact-active"
+    >
+      Roulette
     </Nav.Link>
   </Nav>
+  </Navbar.Collapse>
+</Navbar>
 );
 
 const AuthNav = () => {
