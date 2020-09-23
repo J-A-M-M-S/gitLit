@@ -1,3 +1,14 @@
+.header {
+  font-family: "Permanent Marker", sans-serif;
+  display: flex;
+  justify-content: center;
+  color: rgb(107, 16, 16);
+  background-color: black;
+  padding: 20px;
+  font-stretch: ultra-expanded;
+  height: min-content;
+}
+
 .social-container {
   background: #eee;
   padding: 25px 50px;
@@ -26,5 +37,5 @@ a.twitter {
 }
 
 a.instagram {
-  color: black;
+  color: white;
 }

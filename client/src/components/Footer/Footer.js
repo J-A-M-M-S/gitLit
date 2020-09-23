@@ -9,30 +9,21 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => (
-  <footer className="bg-light p-3 text-center">
+  <footer className="header">
     <div className="logo" />
-    <p class="social-container">
+    <p>
       <h3>Like, Follow, Subscribe</h3>
-      <a
-        href="https://www.youtube.com/c/jamesqquick"
-        className="youtube social"
-      >
+      <a href="https://www.youtube.com/" className="youtube social">
         <FontAwesomeIcon icon={faYoutube} size="2x" />
       </a>
-      <a
-        href="https://www.facebook.com/learnbuildteach/"
-        className="facebook social"
-      >
+      <a href="https://www.facebook.com/" className="facebook social">
         <FontAwesomeIcon icon={faFacebook} size="2x" />
       </a>
-      <a
-        href="https://www.twitter.com/jamesqquick"
-        className="twitter social"
-      >
+      <a href="https://www.twitter.com/" className="twitter social">
         <FontAwesomeIcon icon={faTwitter} size="2x" />
       </a>
       <a
-        href="https://www.instagram.com/learnbuildteach"
+        href="https://www.instagram.com/"
         className="instagram social"
       >
         <FontAwesomeIcon icon={faInstagram} size="2x" />
