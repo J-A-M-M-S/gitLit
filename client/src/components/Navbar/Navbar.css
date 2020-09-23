@@ -4,5 +4,5 @@
 }
 
 .hamburger {
-  justify-content: unset;
+  justify-content: unset !important;
 }

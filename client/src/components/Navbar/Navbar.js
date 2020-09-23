@@ -9,14 +9,14 @@ import "./Navbar.css";
 const MainNav = () => (
   <Navbar expand="lg" variant="dark">
     {/*ERROR gitlit brand logo clicks and signs out of login" */}
-    {/* <Navbar.Brand
+    <Navbar.Brand
       as={RouterNavLink}
       to="/"
       exact
       className="router-link-exact-active"
     >
       gitLit
-    </Navbar.Brand> */}
+    </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="router-link-exact-active">
@@ -78,7 +78,7 @@ const AuthNav = () => {
 const NavBar = () => {
   return (
     <Navbar expand="md" className="fullbar">
-      <Container className="hamburger">
+      <Container style={{ justifyContent: "unset" }}>
         <Navbar.Brand as={RouterNavLink} className="logo" to="/" />
         <MainNav />
         <AuthNav />
