@@ -1,5 +1,5 @@
 import Content from "./Content/Content";
-import Footer from "./footer";
+import Footer from "./Footer/Footer";
 import Hero from "./Hero/Hero";
 import Loading from "./Loading/Loading";
 import NavBar from "./Navbar/Navbar";
