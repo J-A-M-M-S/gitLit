@@ -4,7 +4,7 @@ import Hero from "./Hero/Hero";
 import Loading from "./Loading/Loading";
 import NavBar from "./Navbar/Navbar";
 import Highlight from "./Highlight/Highlight";
-import PrivateRoute from "./private-route";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 export {
   Content,
