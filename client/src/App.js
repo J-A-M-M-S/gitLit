@@ -2,8 +2,9 @@ import React from "react";
 import Title from "./components/Title";
 import { Route, Switch } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import { NavBar, Footer, Loading, PrivateRoute } from "./components";
-import { Home, Profile, ExternalApi } from "./views";
+import { Footer, Loading, PrivateRoute } from "./components";
+import NavBar from "./components/Navbar"
+import { Home, Profile, ExternalApi, Mixology, DrinkSearch, Roulette } from "./views";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const App = () => {
@@ -21,6 +22,9 @@ const App = () => {
           <Route path="/" exact component={Home} />
           <PrivateRoute path="/profile" component={Profile} />
           <Route path="/external-api" component={ExternalApi} />
+          <Route path="/mixology" component={Mixology} />
+          <Route path="/drinksearch" component={DrinkSearch} />
+          <Route path="/roulette" component={Roulette} />
         </Switch>
       </Container>
       <Footer />
