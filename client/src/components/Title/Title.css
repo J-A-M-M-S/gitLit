@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+
+.header {
+  font-family: "Permanent Marker", sans-serif;
+  display: flex;
+  justify-content: center;
+  color: rgb(107, 16, 16);
+  background-color: black;
+  padding: 20px;
+  font-stretch: ultra-expanded;
+}
