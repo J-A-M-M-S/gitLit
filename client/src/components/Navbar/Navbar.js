@@ -8,7 +8,6 @@ import "./Navbar.css";
 
 const MainNav = () => (
   <Navbar expand="lg">
-    {/*ERROR gitlit brand logo clicks and signs out of login" */}
     <Navbar.Brand
       as={RouterNavLink}
       to="/"
