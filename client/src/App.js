@@ -3,7 +3,7 @@ import Title from "./components/Title/Title";
 import { Route, Switch } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { NavBar, Footer, Loading, PrivateRoute } from "./components";
-// import NavBar from "./components/Navbar/";
+
 import {
   Home,
   Profile,
