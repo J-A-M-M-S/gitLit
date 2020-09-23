@@ -1,6 +1,6 @@
 import React from "react";
 
-import contentData from "../utils/content-data";
+import contentData from "../../utils/content-data";
 import { Col, Row } from "react-bootstrap";
 
 const Content = () => (
@@ -10,7 +10,11 @@ const Content = () => (
       {contentData.map((col, i) => (
         <Col key={i} md={5} className="mb-4">
           <h6 className="mb-3">
-            <a target="_blank" rel="noopener noreferrer" href={col.link}>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={col.link}
+            >
               {col.title}
             </a>
           </h6>

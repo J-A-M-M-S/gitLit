@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, ButtonGroup, Container } from "react-bootstrap";
-import Highlight from "../components/highlight";
+import Highlight from "../components/Highlight";
 
 export const ExternalApi = () => {
   const [message, setMessage] = useState("");
