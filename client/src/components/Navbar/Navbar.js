@@ -7,7 +7,7 @@ import LoginButton from "../loginButton";
 import "./Navbar.css";
 
 const MainNav = () => (
-  <Navbar expand="lg">
+  <Navbar expand="lg" variant="dark">
     {/*ERROR gitlit brand logo clicks and signs out of login" */}
     <Navbar.Brand
       as={RouterNavLink}
@@ -19,12 +19,12 @@ const MainNav = () => (
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="mr-auto" style={{ justifyContent: "left" }}>
+      <Nav className="router-link-exact-active">
         <Nav.Link
           as={RouterNavLink}
           to="/"
           exact
-          activeClassName="router-link-exact-active"
+          className="router-link-exact-active"
         >
           Home
         </Nav.Link>
@@ -32,7 +32,7 @@ const MainNav = () => (
           as={RouterNavLink}
           to="/profile"
           exact
-          activeClassName="router-link-exact-active"
+          className="router-link-exact-active"
         >
           Profile
         </Nav.Link>
@@ -40,7 +40,7 @@ const MainNav = () => (
           as={RouterNavLink}
           to="/mixology"
           exact
-          activeClassName="router-link-exact-active"
+          className="router-link-exact-active"
         >
           Mixology
         </Nav.Link>
@@ -48,7 +48,7 @@ const MainNav = () => (
           as={RouterNavLink}
           to="/drinksearch"
           exact
-          activeClassName="router-link-exact-active"
+          className="router-link-exact-active"
         >
           Drink Search
         </Nav.Link>
@@ -56,7 +56,7 @@ const MainNav = () => (
           as={RouterNavLink}
           to="/roulette"
           exact
-          activeClassName="router-link-exact-active"
+          className="router-link-exact-active"
         >
           Roulette
         </Nav.Link>

@@ -1,4 +1,8 @@
 .fullbar {
-    background-color: maroon;
-  }
-  
+  background-color: maroon;
+}
+
+.router-link-exact-active {
+  color: white;
+  text-align: left;
+}
