@@ -22,9 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-<<<<<<< HEAD
-#.env file
-=======
 # dotenv environment variables file
->>>>>>> origin/master
 .env
