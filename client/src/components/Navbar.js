@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink as RouterNavLink, Link } from "react-router-dom";
+import { NavLink as RouterNavLink } from "react-router-dom";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "./logoutButton";
@@ -12,27 +12,27 @@ const MainNav = () => (
     <Navbar.Brand   
           as={RouterNavLink}
           to="/"
-          exact="true"
+          exact
           className="router-link-exact-active">gitLit</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto" style={{ justifyContent: "left" }}>
-        <Link
+        <Nav.Link
           as={RouterNavLink}
           to="/"
-          exact="true"
+          exact
           className="router-link-exact-active"
         >
           Home
-        </Link>
-        <Link
+        </Nav.Link>
+        <Nav.Link
           as={RouterNavLink}
           to="/profile"
-          exact="true"
+          exact
           className="router-link-exact-active"
         >
           Profile
-        </Link>
+        </Nav.Link>
         <Nav.Link
           as={RouterNavLink}
           to="/mixology"
