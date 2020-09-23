@@ -2,18 +2,21 @@ import React from "react";
 import { NavLink as RouterNavLink } from "react-router-dom";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { useAuth0 } from "@auth0/auth0-react";
-import LogoutButton from "./logoutButton";
-import LoginButton from "./loginButton";
+import LogoutButton from "../logoutButton";
+import LoginButton from "../loginButton";
 import "./Navbar.css";
- 
+
 const MainNav = () => (
   <Navbar expand="lg">
     {/*ERROR gitlit brand logo clicks and signs out of login" */}
-    <Navbar.Brand   
-          as={RouterNavLink}
-          to="/"
-          exact
-          className="router-link-exact-active">gitLit</Navbar.Brand>
+    <Navbar.Brand
+      as={RouterNavLink}
+      to="/"
+      exact
+      className="router-link-exact-active"
+    >
+      gitLit
+    </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto" style={{ justifyContent: "left" }}>
@@ -21,7 +24,7 @@ const MainNav = () => (
           as={RouterNavLink}
           to="/"
           exact
-          className="router-link-exact-active"
+          activeClassName="router-link-exact-active"
         >
           Home
         </Nav.Link>
@@ -29,7 +32,7 @@ const MainNav = () => (
           as={RouterNavLink}
           to="/profile"
           exact
-          className="router-link-exact-active"
+          activeClassName="router-link-exact-active"
         >
           Profile
         </Nav.Link>
@@ -61,17 +64,17 @@ const MainNav = () => (
     </Navbar.Collapse>
   </Navbar>
 );
- 
+
 const AuthNav = () => {
   const { isAuthenticated } = useAuth0();
- 
+
   return (
     <Nav className="justify-content-end">
       {isAuthenticated ? <LogoutButton /> : <LoginButton />}
     </Nav>
   );
 };
- 
+
 const NavBar = () => {
   return (
     <Navbar expand="md" className="fullbar">
@@ -83,5 +86,5 @@ const NavBar = () => {
     </Navbar>
   );
 };
- 
+
 export default NavBar;

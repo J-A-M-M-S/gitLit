@@ -2,9 +2,16 @@ import React from "react";
 import Title from "./components/Title";
 import { Route, Switch } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import { Footer, Loading, PrivateRoute } from "./components";
-import NavBar from "./components/Navbar"
-import { Home, Profile, ExternalApi, Mixology, DrinkSearch, Roulette } from "./views";
+import { NavBar, Footer, Loading, PrivateRoute } from "./components";
+// import NavBar from "./components/Navbar/";
+import {
+  Home,
+  Profile,
+  ExternalApi,
+  Mixology,
+  DrinkSearch,
+  Roulette,
+} from "./views";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const App = () => {
