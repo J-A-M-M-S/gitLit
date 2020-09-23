@@ -1,8 +1,8 @@
 .fullbar {
   background-color: maroon;
+  justify-content: unset;
 }
 
-.router-link-exact-active {
-  color: white;
-  text-align: left;
+.hamburger {
+  justify-content: unset;
 }
