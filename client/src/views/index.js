@@ -1,7 +1,7 @@
-import Home from "./home";
-import Profile from "./profile";
-import DrinkSearch from "./drinksearch";
-import Mixology from "./mixology";
-import Roulette from "./roulette";
+import Home from "./Home";
+import Profile from "./Profile";
+import DrinkSearch from "./DrinkSearch";
+import Mixology from "./Mixology";
+import Roulette from "./Roulette";
 
 export { Home, Profile, DrinkSearch, Mixology, Roulette };

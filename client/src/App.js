@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap";
 import { NavBar, Footer, Loading, PrivateRoute } from "./components";
 import Search from "./components/Search";
 // import NavBar from "./components/Navbar/";
+
 import {
   Home,
   Profile,
