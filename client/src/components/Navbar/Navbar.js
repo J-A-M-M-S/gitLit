@@ -7,7 +7,10 @@ import LoginButton from "../LoginButton/LoginButton";
 import "./Navbar.css";
 
 const MainNav = () => (
-  <Navbar expand="lg">
+
+  <Navbar expand="lg" variant="dark">
+    
+
     <Navbar.Brand
       as={RouterNavLink}
       to="/"
@@ -18,12 +21,12 @@ const MainNav = () => (
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="mr-auto" style={{ justifyContent: "left" }}>
+      <Nav className="router-link-exact-active">
         <Nav.Link
           as={RouterNavLink}
           to="/"
           exact
-          activeClassName="router-link-exact-active"
+          className="router-link-exact-active"
         >
           Home
         </Nav.Link>
@@ -31,7 +34,7 @@ const MainNav = () => (
           as={RouterNavLink}
           to="/profile"
           exact
-          activeClassName="router-link-exact-active"
+          className="router-link-exact-active"
         >
           Profile
         </Nav.Link>
@@ -39,7 +42,7 @@ const MainNav = () => (
           as={RouterNavLink}
           to="/mixology"
           exact
-          activeClassName="router-link-exact-active"
+          className="router-link-exact-active"
         >
           Mixology
         </Nav.Link>
@@ -47,7 +50,7 @@ const MainNav = () => (
           as={RouterNavLink}
           to="/drinksearch"
           exact
-          activeClassName="router-link-exact-active"
+          className="router-link-exact-active"
         >
           Drink Search
         </Nav.Link>
@@ -55,7 +58,7 @@ const MainNav = () => (
           as={RouterNavLink}
           to="/roulette"
           exact
-          activeClassName="router-link-exact-active"
+          className="router-link-exact-active"
         >
           Roulette
         </Nav.Link>
@@ -77,7 +80,7 @@ const AuthNav = () => {
 const NavBar = () => {
   return (
     <Navbar expand="md" className="fullbar">
-      <Container>
+      <Container style={{ justifyContent: "unset" }}>
         <Navbar.Brand as={RouterNavLink} className="logo" to="/" />
         <MainNav />
         <AuthNav />
