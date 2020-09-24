@@ -1,4 +1,8 @@
 .fullbar {
-    background-color: maroon;
-  }
-  
+  background-color: maroon;
+  justify-content: unset;
+}
+
+.hamburger {
+  justify-content: unset !important;
+}
