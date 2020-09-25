@@ -1,7 +1,7 @@
 import React from "react";
 
-const DrinkSearch = () => {
+const Drinksearch = () => {
   return <h1>Drink Search Insert UX/UI Here</h1>;
 };
 
-export default DrinkSearch;
+export default Drinksearch;
