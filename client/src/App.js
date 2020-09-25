@@ -26,10 +26,10 @@ const App = () => {
         <Title />
         <Switch>
           <Route path="/" exact component={Home} />
-          <PrivateRoute path="/profile" component={Profile} />
-          <Route path="/mixology" component={Mixology} />
-          <Route path="/drinksearch" component={DrinkSearch} />
-          <Route path="/roulette" component={Roulette} />
+          <PrivateRoute path="/Profile" component={Profile} />
+          <Route path="/Mixology" component={Mixology} />
+          <Route path="/DrinkSearch" component={DrinkSearch} />
+          <Route path="/Roulette" component={Roulette} />
         </Switch>
       </Container>
       <Footer />
