@@ -7,10 +7,7 @@ import LoginButton from "../LoginButton/LoginButton";
 import "./Navbar.css";
 
 const MainNav = () => (
-
   <Navbar expand="lg" variant="dark">
-    
-
     <Navbar.Brand
       as={RouterNavLink}
       to="/"
@@ -71,9 +68,7 @@ const AuthNav = () => {
   const { isAuthenticated } = useAuth0();
 
   return (
-    <Nav className="justify-content-end">
-      {isAuthenticated ? <LogoutButton /> : <LoginButton />}
-    </Nav>
+    <Nav>{isAuthenticated ? <LogoutButton /> : <LoginButton />}</Nav>
   );
 };
 

@@ -1,12 +1,10 @@
 const router = require("express").Router();
 const axios = require("axios");
-
 // const burgerRoutes = require('./burger');
 // const employeeRoutes = require('./employees');
 // Book routes
 // router.use('/burger', burgerRoutes);
 // router.use('/employees', employeeRoutes);
-
 router.get("/search/:value", ({ params }, res) => {
   const drinksarry = [];
   const alldrinks = [];
@@ -27,5 +25,4 @@ router.get("/search/:value", ({ params }, res) => {
       res.json(alldrinks);
     });
 });
-
 module.exports = router;
