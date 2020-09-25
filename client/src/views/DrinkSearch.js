@@ -1,8 +1,7 @@
 import React from "react";
-import Search from "../components/Search/Search";
 
 const DrinkSearch = () => {
-  return <Search />;
+  return <h1>Drink Search Insert UX/UI Here</h1>;
 };
 
 export default DrinkSearch;
