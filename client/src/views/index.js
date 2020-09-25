@@ -1,7 +1,7 @@
 import Home from "./Home";
 import Profile from "./Profile";
-import Drinksearch from "./Drinksearch";
+import DrinkSearch from "./DrinkSearch";
 import Mixology from "./Mixology";
 import Roulette from "./Roulette";
 
-export { Home, Profile, Drinksearch, Mixology, Roulette };
+export { Home, Profile, DrinkSearch, Mixology, Roulette };

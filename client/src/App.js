@@ -10,7 +10,7 @@ import {
   Home,
   Profile,
   Mixology,
-  Drinksearch,
+  DrinkSearch,
   Roulette,
 } from "./views";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -29,10 +29,10 @@ const App = () => {
         <Search />
         <Switch>
           <Route path="/" exact component={Home} />
-          <PrivateRoute path="/profile" component={Profile} />
-          <Route path="/mixology" component={Mixology} />
-          <Route path="/Drinksearch" component={Drinksearch} />
-          <Route path="/roulette" component={Roulette} />
+          <PrivateRoute path="/Profile" component={Profile} />
+          <Route path="/Mixology" component={Mixology} />
+          <Route path="/DrinkSearch" component={DrinkSearch} />
+          <Route path="/Roulette" component={Roulette} />
         </Switch>
       </Container>
       <Footer />
