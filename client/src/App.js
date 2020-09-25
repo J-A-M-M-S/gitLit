@@ -3,6 +3,8 @@ import Title from "./components/Title/Title";
 import { Route, Switch } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { NavBar, Footer, Loading, PrivateRoute } from "./components";
+import Search from "./components/Search";
+// import NavBar from "./components/Navbar/";
 
 import {
   Home,
@@ -24,6 +26,7 @@ const App = () => {
       <NavBar />
       <Container className="flex-grow-1 mt-5">
         <Title />
+        <Search />
         <Switch>
           <Route path="/" exact component={Home} />
           <PrivateRoute path="/profile" component={Profile} />
