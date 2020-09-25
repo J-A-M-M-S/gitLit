@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import API from "../utils/api";
+import API from "../../utils/api";
 import { InputGroup, FormControl } from "react-bootstrap";
 
 function Search() {
+  // take out the below line after search function is in place.
   const drink = "margarita";
   const [data, setdata] = useState([]);
   useEffect(() => {
