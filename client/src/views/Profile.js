@@ -20,9 +20,6 @@ export const Profile = () => {
           <p className="lead text-muted">{user.email}</p>
         </Col>
       </Row>
-      <Row>
-        <Highlight>{JSON.stringify(user, null, 2)}</Highlight>
-      </Row>
     </Container>
   );
 };
