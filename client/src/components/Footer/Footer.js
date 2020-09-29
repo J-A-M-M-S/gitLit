@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="header">
+    <footer className="footer">
       <div className="logo" />
       <h3>Like, Follow, Subscribe</h3>
       <a href="https://www.youtube.com/" className="youtube social">
