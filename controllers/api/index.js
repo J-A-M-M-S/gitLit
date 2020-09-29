@@ -14,7 +14,6 @@ router.get("/search/:value", ({ params }, res) => {
       `https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=${cocktailVal}`,
     )
     .then((results) => {
-      console.log(results);
       drinksarry.push(results);
       const data = results.data;
       for (let index = 0; index < data.drinks.length; index++) {
