@@ -6,7 +6,9 @@ const db = require("./models");
 const environment = process.env.NODE_ENV || "development";
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
+var cors = require("cors");
 
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
