@@ -2,13 +2,11 @@ import React, { useState, useEffect } from "react";
 import API from "../../utils/api";
 
 function Search() {
-  // take out the below line after search function is in place.
-
   const [data, setdata] = useState([]);
   const [recipeSearch, setRecipeSearch] = useState("");
 
   useEffect(() => {
-    API.searchDrinks("margarita").then((results) => {
+    API.searchDrinks("").then((results) => {
       setdata(results.data);
     });
   }, []);
