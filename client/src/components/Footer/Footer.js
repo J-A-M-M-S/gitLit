@@ -13,7 +13,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="logo" />
       <h3>Like, Follow, Subscribe</h3>
-      <a href="https://www.youtube.com/" className="youtube social">
+      <a href="https://www.youtube.com/" className="youtube social" data-testid="testClick">
         <FontAwesomeIcon icon={faYoutube} size="2x" />
       </a>
       <a href="https://www.facebook.com/" className="facebook social">
