@@ -22,8 +22,9 @@ router.get("/search/:value", ({ params }, res) => {
     });
 });
 // complete list of ingredients for selected cocktail
-router.get("/search/:id", ({ params }, res) => {
+router.get("/search/drinksearch/:id", ({ params }, res) => {
   const selectDrink = params.id;
+  console.log("hit this route /search/:id", selectDrink);
   axios
     .get(
       `https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=${selectDrink}`,
@@ -67,6 +68,7 @@ router.get("/search/:id", ({ params }, res) => {
         measure15: element.strMeasure15,
       };
       res.json(drinkDetails);
+      console.log(drinkDetails);
     });
 });
 

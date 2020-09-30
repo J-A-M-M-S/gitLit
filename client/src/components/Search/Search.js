@@ -3,7 +3,8 @@ import API from "../../utils/api";
 
 function Search() {
   const [data, setdata] = useState([]);
-  const [recipeSearch, setRecipeSearch] = useState("");
+  const [cocktailSearch, setCocktailSearch] = useState("");
+  const [deetsSearch, setDeetsSearch] = useState("");
 
   useEffect(() => {
     API.searchDrinks("").then((results) => {
@@ -15,13 +16,19 @@ function Search() {
     // Destructure the name and value properties off of event.target
     // Update the appropriate state
     const { value } = event.target;
-    setRecipeSearch(value);
+    setCocktailSearch(value);
   };
   // API call to find all cocktails matching input
   const searchCocktail = (e) => {
     e.preventDefault();
-    API.searchDrinks(recipeSearch).then((results) => {
+    API.searchDrinks(cocktailSearch).then((results) => {
       setdata(results.data);
+    });
+  };
+
+  const drinkDeets = (id) => {
+    API.drinkInfo(id).then((results) => {
+      console.log(results);
     });
   };
 
@@ -29,7 +36,7 @@ function Search() {
     <div>
       <input
         type="text"
-        value={recipeSearch}
+        value={cocktailSearch}
         onChange={handleInputChange}
       />
       <button type="submit" onClick={searchCocktail}>
@@ -40,7 +47,12 @@ function Search() {
         {/* pulls cocktails matching the input and renders them as buttons */}
         {data.map((drink, index) => (
           <li key={index}>
-            <button key={drink.id}>{drink.name}</button>
+            <button
+              key={drink.id}
+              onClick={() => drinkDeets(drink.id)}
+            >
+              {drink.name}
+            </button>
           </li>
         ))}
       </ul>
