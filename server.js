@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.static("client/build"));
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/budget",
+  process.env.MONGODB_URI || "mongodb://localhost/gitLitDB",
   {
     useUnifiedTopology: true,
     useNewUrlParser: true,
