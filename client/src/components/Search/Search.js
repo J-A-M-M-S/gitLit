@@ -38,16 +38,17 @@ function Search() {
       <button type="submit" onClick={getDrink}>
         Submit
       </button>
+      <Favorite></Favorite>
 
       {data.map((drink) => (
         <p key={drink.id}>
           {drink.name}
-          <Favorite
+          {/* <Favorite
             drinkid={drink.id}
             drinkname={drink.name}
             drinkimg={drink.strDrinkThumb}
             drinkinst={drink.strInstructions}
-          ></Favorite>
+          ></Favorite> */}
         </p>
       ))}
     </div>
