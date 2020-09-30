@@ -34,7 +34,7 @@ function Search() {
         value={recipeSearch}
         onChange={handleInputChange}
       />
-      <button type="submit" onClick={getDrink}>
+      <button type="submit" onClick={getDrink} data-testid="testClick">
         Submit
       </button>
 
