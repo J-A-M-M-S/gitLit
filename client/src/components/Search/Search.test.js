@@ -12,3 +12,4 @@ test("should click Submit button ", () => {
 	testClick(<Search />, "testClick");
 });
 
+
