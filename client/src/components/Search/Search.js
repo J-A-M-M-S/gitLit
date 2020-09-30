@@ -19,8 +19,8 @@ function Search() {
     const { value } = event.target;
     setRecipeSearch(value);
   };
-
-  const getDrink = (e) => {
+  // API call to find all cocktails matching input
+  const searchCocktail = (e) => {
     e.preventDefault();
     API.searchDrinks(recipeSearch).then((results) => {
       setdata(results.data);
@@ -34,13 +34,18 @@ function Search() {
         value={recipeSearch}
         onChange={handleInputChange}
       />
-      <button type="submit" onClick={getDrink}>
+      <button type="submit" onClick={searchCocktail}>
         Submit
       </button>
 
-      {data.map((drink) => (
-        <p key={drink.id}>{drink.name}</p>
-      ))}
+      <ul>
+        {/* pulls cocktails matching the input and renders them as buttons */}
+        {data.map((drink, index) => (
+          <li key={index}>
+            <button key={drink.id}>{drink.name}</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
