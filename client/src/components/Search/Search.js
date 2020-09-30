@@ -1,37 +1,12 @@
-import React, { useState, useEffect } from "react";
-import API from "../../utils/api";
+import React from "react";
 
-function Search() {
-  const [data, setdata] = useState([]);
-  const [cocktailSearch, setCocktailSearch] = useState("");
-  const [deetsSearch, setDeetsSearch] = useState("");
-
-  useEffect(() => {
-    API.searchDrinks("").then((results) => {
-      setdata(results.data);
-    });
-  }, []);
-
-  const handleInputChange = (event) => {
-    // Destructure the name and value properties off of event.target
-    // Update the appropriate state
-    const { value } = event.target;
-    setCocktailSearch(value);
-  };
-  // API call to find all cocktails matching input
-  const searchCocktail = (e) => {
-    e.preventDefault();
-    API.searchDrinks(cocktailSearch).then((results) => {
-      setdata(results.data);
-    });
-  };
-
-  const drinkDeets = (id) => {
-    API.drinkInfo(id).then((results) => {
-      console.log(results);
-    });
-  };
-
+function Search({
+  data,
+  cocktailSearch,
+  handleInputChange,
+  searchCocktail,
+  drinkDeets,
+}) {
   return (
     <div>
       <input
