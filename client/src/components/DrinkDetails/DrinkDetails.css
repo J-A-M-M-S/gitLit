@@ -1,3 +1,9 @@
+.drinkDetails {
+  width: auto;
+  background-color: grey;
+  padding: 20px;
+}
+
 .drinkDetails img {
-  width: 200px;
+  width: 250px;
 }
