@@ -1,4 +1,5 @@
 #fullbar {
   background-color: maroon;
+  display: flex;
   justify-content: center;
 }
