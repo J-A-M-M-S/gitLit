@@ -1,4 +1,5 @@
 import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import "./DrinkDetails.css";
 
 //Concatinates ingredients and measurements then pushes them into an array before rendering
@@ -16,20 +17,33 @@ function DrinkDetails({ details }) {
   }
 
   return (
-    <div className="drinkDetails">
-      <h3>{details.name}</h3>
-      <img src={details.image} alt={details.name} />
-      <ol>
-        {steps.map(({ id, ing, measure }) => {
-          return (
-            <li key={id}>
-              <span>{ing}&nbsp;</span>
-              <span>{measure}</span>
-            </li>
-          );
-        })}
-      </ol>
-    </div>
+    <Container className="drinkDetails">
+      <Row>
+        <Col>
+          <img src={details.image} alt={details.name} />
+        </Col>
+        <Col>
+          <Row>
+            <h3>{details.name}</h3>
+          </Row>
+          <Row>
+            <p>{details.instructions}</p>
+          </Row>
+          <Row>
+            <ol>
+              {steps.map(({ id, ing, measure }) => {
+                return (
+                  <li key={id}>
+                    <span>{ing}&nbsp;</span>
+                    <span>{measure}</span>
+                  </li>
+                );
+              })}
+            </ol>
+          </Row>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
