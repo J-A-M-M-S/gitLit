@@ -18,11 +18,11 @@ function DrinkDetails({ details }) {
 
   return (
     <Container className="drinkDetails">
-      <Row>
+      <Row id="drinkName">
         <h3>{details.name}</h3>
       </Row>
       <Row>
-        <Col>
+        <Col id="drinkImage">
           <img src={details.image} alt={details.name} />
         </Col>
         <Col>

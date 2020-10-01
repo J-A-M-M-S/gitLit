@@ -1,9 +1,26 @@
 .drinkDetails {
   width: auto;
   background-color: grey;
-  padding: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: #a30707be;
+  border-radius: 25px;
 }
 
 .drinkDetails img {
   width: 250px;
+  display: flex;
+  padding-bottom: 10px;
+}
+
+#drinkName {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+#drinkImage {
+  display: flex;
+  justify-content: center;
 }
