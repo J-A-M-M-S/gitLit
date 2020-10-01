@@ -1,33 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Favorite.css";
 import API from "../../utils/api";
 
-function Favorite(props) {
-  function handleClick(e) {
-    e.preventDefault();
-    console.log("The link was clicked.");
-  }
+function Favorite() {
+  const [setdata] = useState([]);
+  const [favorite, setFavorite] = useState("");
+
+  // const handleInputChange = (event) => {
+  //   // Destructure the name and value properties off of event.target
+  //   // Update the appropriate state
+  //   const { value } = event.target;
+  //   setFavorite(value);
+  // };
+
+  const saveFav = () => {
+    API.saveFav(favorite).then((results) => {
+      setdata(results.data);
+    });
+  };
+
   return (
-    <button
-      onClick={API.saveFav(props)}
-      className={`fav-btn ${props["data-value"]}`}
-      {...props}
-    >
-      submit
-    </button>
+    <div>
+      <i class="far fa-star">
+        <button type="fav" onClick={saveFav}></button>
+      </i>
+    </div>
   );
 }
-
-// function Favorite(props) {
-//   return (
-//     <button
-//       onClick={API.saveFav(props)}
-//       className={`fav-btn ${props["data-value"]}`}
-//       {...props}
-//     >
-//       submit
-//     </button>
-//   );
-// }
 
 export default Favorite;
