@@ -17,6 +17,7 @@ function DrinkDetails({ details }) {
 
   return (
     <div className="drinkDetails">
+      <h3>{details.name}</h3>
       <img src={details.image} alt={details.name} />
       <ol>
         {steps.map(({ id, ing, measure }) => {
