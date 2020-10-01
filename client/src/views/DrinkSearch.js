@@ -4,6 +4,7 @@ import Search from "../components/Search/Search";
 import DrinkDetails from "../components/DrinkDetails/DrinkDetails";
 
 const DrinkSearch = () => {
+  //  Sets state for drink and ingredient searches
   const [data, setdata] = useState([]);
   const [cocktailSearch, setCocktailSearch] = useState("");
   const [deetsSearch, setDeetsSearch] = useState({});
@@ -27,7 +28,7 @@ const DrinkSearch = () => {
       setdata(results.data);
     });
   };
-
+  // API call to get selected drinks details
   const drinkDeets = (id) => {
     API.drinkInfo(id).then((results) => {
       console.log(results);
