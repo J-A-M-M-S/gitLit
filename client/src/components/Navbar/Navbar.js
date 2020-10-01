@@ -66,7 +66,7 @@ const AuthNav = () => {
 
 const NavBar = () => {
   return (
-    <Navbar expand="md" className="fullbar">
+    <Navbar expand="md" id="fullbar">
       <Container style={{ justifyContent: "unset" }}>
         <Navbar.Brand as={RouterNavLink} className="logo" to="/" />
         <MainNav />

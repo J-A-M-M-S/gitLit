@@ -1,3 +1,4 @@
-.fullbar {
+#fullbar {
   background-color: maroon;
+  justify-content: center;
 }
