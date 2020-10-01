@@ -1,6 +1,7 @@
 import React from "react";
 import "./DrinkDetails.css";
 
+//Concatinates ingredients and measurements then pushes them into an array before rendering
 function DrinkDetails({ details }) {
   const steps = [];
   if (details && details.ing1) {
