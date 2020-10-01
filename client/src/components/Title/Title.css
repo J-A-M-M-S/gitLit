@@ -1,13 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 
 .header {
-  font-family: "Permanent Marker", sans-serif;
+  font-family: "Righteous";
+
   display: flex;
   justify-content: center;
   color: rgb(107, 16, 16);
   background-color: black;
-  padding: 20px;
   font-stretch: ultra-expanded;
   height: min-content;
   width: 100%;
+}
+
+#title-text {
+  font-size: 60px;
 }
