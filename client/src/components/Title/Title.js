@@ -4,7 +4,7 @@ import "./Title.css";
 const Title = () => {
   return (
     <header className="header">
-      <h1>gitLit</h1>
+      <h1 id="title-text">gitLit</h1>
     </header>
   );
 };
