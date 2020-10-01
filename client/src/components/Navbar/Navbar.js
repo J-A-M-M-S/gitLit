@@ -8,14 +8,6 @@ import "./Navbar.css";
 
 const MainNav = () => (
   <Navbar expand="lg" variant="dark">
-    {/* <Navbar.Brand
-      as={RouterNavLink}
-      to="/"
-      exact
-      className="router-link-exact-active"
-    >
-      gitLit
-    </Navbar.Brand> */}
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="router-link-exact-active">
