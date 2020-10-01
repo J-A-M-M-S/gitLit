@@ -9,7 +9,7 @@ const DrinkSearch = () => {
   const [deetsSearch, setDeetsSearch] = useState({});
 
   useEffect(() => {
-    API.searchDrinks("").then((results) => {
+    API.searchDrinks().then((results) => {
       setdata(results.data);
     });
   }, []);
