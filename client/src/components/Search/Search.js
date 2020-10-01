@@ -14,7 +14,7 @@ function Search({
         value={cocktailSearch}
         onChange={handleInputChange}
       />
-      <button type="submit" onClick={searchCocktail}>
+      <button type="submit" onClick={searchCocktail} data-testid="testClick">
         Submit
       </button>
 
