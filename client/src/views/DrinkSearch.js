@@ -31,7 +31,6 @@ const DrinkSearch = () => {
   // API call to get selected drinks details
   const drinkDeets = (id) => {
     API.drinkInfo(id).then((results) => {
-      console.log(results);
       setDeetsSearch(results.data);
     });
   };

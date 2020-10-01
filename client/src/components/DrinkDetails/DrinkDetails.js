@@ -12,7 +12,7 @@ function DrinkDetails({ details }) {
         steps.push({ id: i, ing: ing, measure: measure });
       }
     }
-    console.log(steps);
+    // console.log(steps);
   }
 
   return (
