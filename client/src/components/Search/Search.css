@@ -1,0 +1,26 @@
+.searchRes {
+  margin-top: 50px;
+}
+
+#searchBox {
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#searchInfo {
+  height: 200px;
+  overflow: scroll;
+  background-color: maroon;
+  border-radius: 25px;
+}
+
+#drinkBtn {
+  border-radius: 10px;
+  background-color: #002642;
+  color: white;
+}
+
+#subBtn {
+  background-color: #e59500;
+  border-radius: 10px;
+}
