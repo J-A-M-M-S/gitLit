@@ -1,7 +1,7 @@
 {
   "idUser": "test",
-  "idDrink": "17837",
-  "strDrink": "Adam",
-  "strInstructions": "In a shaker half-filled with ice cubes, combine all of the ingredients. Shake well. Strain into a cocktail glass.",
+  "idDrink": "9999999999",
+  "strDrink": "Luke Skywalker",
+  "strInstructions": "Testing the description",
   "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/v0at4i1582478473.jpg"
 }
