@@ -1,4 +1,12 @@
 import React from "react";
+import {
+  Container,
+  Row,
+  Col,
+  InputGroup,
+  FormControl,
+} from "react-bootstrap";
+import "./Search.css";
 
 function Search({
   data,
@@ -8,29 +16,47 @@ function Search({
   drinkDeets,
 }) {
   return (
-    <div>
-      <input
-        type="text"
-        value={cocktailSearch}
-        onChange={handleInputChange}
-      />
-      <button type="submit" onClick={searchCocktail}>
-        Submit
-      </button>
-
-      <ul>
-        {/* pulls cocktails matching the input and renders them as buttons */}
-        {data.map((drink, index) => (
-          <li key={index}>
+    <div className="searchRes">
+      <Container>
+        <Row>
+          <Col id="searchBox">
+            <InputGroup className="mb-3">
+              <FormControl
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="basic-addon2"
+                type="text"
+                value={cocktailSearch}
+                onChange={handleInputChange}
+              />
+            </InputGroup>
             <button
-              key={drink.id}
-              onClick={() => drinkDeets(drink.id)}
+              id="subBtn"
+              type="submit"
+              onClick={searchCocktail}
             >
-              {drink.name}
+              Submit
             </button>
-          </li>
-        ))}
-      </ul>
+          </Col>
+
+          <Col id="searchInfo">
+            <ul>
+              {/* pulls cocktails matching the input and renders them as buttons */}
+              {data.map((drink, index) => (
+                <li key={index}>
+                  <button
+                    id="drinkBtn"
+                    key={drink.id}
+                    onClick={() => drinkDeets(drink.id)}
+                  >
+                    {drink.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }

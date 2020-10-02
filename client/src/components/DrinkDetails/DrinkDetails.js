@@ -25,11 +25,11 @@ function DrinkDetails({ details }) {
         <Col id="drinkImage">
           <img src={details.image} alt={details.name} />
         </Col>
-        <Col>
+        <Col id="drinkInt">
           <Row>
             <p>{details.instructions}</p>
           </Row>
-          <Row>
+          <Row id="drinkIng">
             <ol>
               {steps.map(({ id, ing, measure }) => {
                 return (
