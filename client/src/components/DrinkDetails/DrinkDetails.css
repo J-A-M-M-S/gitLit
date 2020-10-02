@@ -3,6 +3,7 @@
   padding: 30px;
   display: flex;
   flex-direction: column;
+  max-height: 400px;
   /* background-color: #a30707be; */
   border-radius: 25px;
   background-color: maroon;
