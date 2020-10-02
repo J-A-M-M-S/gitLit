@@ -68,7 +68,6 @@ const NavBar = () => {
   return (
     <Navbar expand="md" id="fullbar">
       <Container>
-        <Navbar.Brand as={RouterNavLink} className="logo" to="/" />
         <MainNav />
         <AuthNav />
       </Container>
