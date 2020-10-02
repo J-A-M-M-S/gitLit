@@ -1,10 +1,7 @@
 const router = require("express").Router();
 const axios = require("axios");
-// const burgerRoutes = require('./burger');
-// const employeeRoutes = require('./employees');
-// Book routes
-// router.use('/burger', burgerRoutes);
-// router.use('/employees', employeeRoutes);
+
+// all drinks which match search input
 router.get("/search/:value", ({ params }, res) => {
   const drinksarry = [];
   const alldrinks = [];
@@ -24,4 +21,54 @@ router.get("/search/:value", ({ params }, res) => {
       res.json(alldrinks);
     });
 });
+// complete list of ingredients for selected cocktail
+router.get("/search/drinksearch/:id", ({ params }, res) => {
+  const selectDrink = params.id;
+  axios
+    .get(
+      `https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=${selectDrink}`,
+    )
+    .then((results) => {
+      const element = results.data.drinks[0];
+      const drinkDetails = {
+        id: element.idDrink,
+        name: element.strDrink,
+        instructions: element.strInstructions,
+        image: element.strDrinkThumb,
+        ing1: element.strIngredient1,
+        ing2: element.strIngredient2,
+        ing3: element.strIngredient3,
+        ing4: element.strIngredient4,
+        ing5: element.strIngredient5,
+        ing6: element.strIngredient6,
+        ing7: element.strIngredient7,
+        ing8: element.strIngredient8,
+        ing9: element.strIngredient9,
+        ing10: element.strIngredient10,
+        ing11: element.strIngredient11,
+        ing12: element.strIngredient12,
+        ing13: element.strIngredient13,
+        ing14: element.strIngredient14,
+        ing15: element.strIngredient15,
+        measure1: element.strMeasure1,
+        measure2: element.strMeasure2,
+        measure3: element.strMeasure3,
+        measure4: element.strMeasure4,
+        measure5: element.strMeasure5,
+        measure6: element.strMeasure6,
+        measure7: element.strMeasure7,
+        measure8: element.strMeasure8,
+        measure9: element.strMeasure9,
+        measure10: element.strMeasure10,
+        measure11: element.strMeasure11,
+        measure12: element.strMeasure12,
+        measure13: element.strMeasure13,
+        measure14: element.strMeasure14,
+        measure15: element.strMeasure15,
+      };
+      res.json(drinkDetails);
+      // console.log(drinkDetails);
+    });
+});
+
 module.exports = router;

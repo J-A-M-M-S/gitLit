@@ -1,5 +1,5 @@
 .footer {
-  font-family: "Permanent Marker", sans-serif;
+  font-family: "Righteous", sans-serif;
   display: flex;
   justify-content: center;
   color: rgb(107, 16, 16);
@@ -7,6 +7,8 @@
   padding: 20px;
   font-stretch: ultra-expanded;
   height: min-content;
+  position: fixed;
+  bottom: 0;
 }
 
 .social-container {

@@ -1,10 +1,11 @@
 import React from "react";
+import "./Hero.css";
 
 const Hero = () => (
-  <div className="text-center hero my-5">
-    <h1 className="mb-4">Some Text</h1>
+  <div className="hero">
+    <h1>Some Text</h1>
 
-    <p className="lead">Lorem ipsum text</p>
+    <p>Lorem ipsum text</p>
   </div>
 );
 

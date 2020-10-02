@@ -1,30 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Favorite.css";
-import API from "../../utils/api";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+// import API from "../../utils/api";
+//import DrinkDetails from "../components/DrinkDetails/DrinkDetails";
+// import { useAuth0 } from "@auth0/auth0-react";
 
 function Favorite() {
-  const [setdata] = useState([]);
-  const [favorite, setFavorite] = useState("");
-
-  // const handleInputChange = (event) => {
-  //   // Destructure the name and value properties off of event.target
-  //   // Update the appropriate state
-  //   const { value } = event.target;
-  //   setFavorite(value);
-  // };
-
-  const saveFav = () => {
-    API.saveFav(favorite).then((results) => {
-      setdata(results.data);
-    });
-  };
+  function saveFavorite(e) {
+    e.preventDefault();
+    console.log("The link was clicked.");
+  }
 
   return (
-    <div>
-      <i class="far fa-star">
-        <button type="fav" onClick={saveFav}></button>
-      </i>
-    </div>
+    <button onClick={saveFavorite}>
+      <FontAwesomeIcon icon={faStar} size="1x" />
+    </button>
   );
 }
 

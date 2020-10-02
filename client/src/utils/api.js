@@ -6,4 +6,13 @@ export default {
   saveFav: function () {
     console.log("testing savfav");
   },
+  drinkInfo: function (id) {
+    if (Number(id)) {
+      return axios.get(
+        "http://localhost:3001/api/search/drinksearch/" + id,
+      );
+    } else {
+      throw new Error("did not receive a valid ID", id);
+    }
+  },
 };
