@@ -1,6 +1,6 @@
 import axios from "axios";
 require("dotenv").config();
-const environment = process.env.NODE_ENV || "development";
+// const environment = process.env.NODE_ENV || "development";
 
 export default {
   searchDrinks: function (value) {
