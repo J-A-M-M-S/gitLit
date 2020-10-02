@@ -2,8 +2,15 @@
   background-color: black;
   width: 100%;
   margin: 0;
-  height: 100vh;
+  height: 100%;
 }
 
 #app {
+  background-color: black;
+  margin: 0;
+  height: 100%;
+}
+
+.whiteGap {
+  background-color: black;
 }

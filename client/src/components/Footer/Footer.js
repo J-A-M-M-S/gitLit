@@ -1,17 +1,13 @@
 import React from "react";
 import "./Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faYoutube,
-  faFacebook,
-  faTwitter,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="logo" />
+<<<<<<< HEAD
       <h3>Like, Follow, Subscribe</h3>
       <a href="https://www.youtube.com/" className="youtube social" data-testid="testClick">
         <FontAwesomeIcon icon={faYoutube} size="2x" />
@@ -22,11 +18,15 @@ const Footer = () => {
       <a href="https://www.twitter.com/" className="twitter social">
         <FontAwesomeIcon icon={faTwitter} size="2x" />
       </a>
+=======
+      <h7>J-A-M-M-S</h7>
+>>>>>>> origin
       <a
-        href="https://www.instagram.com/"
-        className="instagram social"
+        href="https://github.com/J-A-M-M-S/gitLit"
+        target="blank"
+        className="GitHub social"
       >
-        <FontAwesomeIcon icon={faInstagram} size="2x" />
+        <FontAwesomeIcon icon={faGithub} size="1x" />
       </a>
     </footer>
   );
