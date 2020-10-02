@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink as RouterNavLink } from "react-router-dom";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "../LogoutButton/LogoutButton";
 import LoginButton from "../LoginButton/LoginButton";
@@ -8,14 +8,6 @@ import "./Navbar.css";
 
 const MainNav = () => (
   <Navbar expand="lg" variant="dark">
-    {/* <Navbar.Brand
-      as={RouterNavLink}
-      to="/"
-      exact
-      className="router-link-exact-active"
-    >
-      gitLit
-    </Navbar.Brand> */}
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="router-link-exact-active">
@@ -74,12 +66,9 @@ const AuthNav = () => {
 
 const NavBar = () => {
   return (
-    <Navbar expand="md" className="fullbar">
-      <Container style={{ justifyContent: "unset" }}>
-        <Navbar.Brand as={RouterNavLink} className="logo" to="/" />
-        <MainNav />
-        <AuthNav />
-      </Container>
+    <Navbar expand="md" id="fullbar">
+      <MainNav id="mainNav" />
+      <AuthNav id="logButton" />
     </Navbar>
   );
 };
