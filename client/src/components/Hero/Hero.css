@@ -4,3 +4,8 @@
   margin: 0;
   padding: 0;
 }
+
+.ingredImg {
+  width: 125px;
+  height: 125px;
+}
