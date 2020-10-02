@@ -1,5 +1,5 @@
 import React from "react";
-import Favorite from "../Favorite/Favorite.js";
+// import Favorite from "../Favorite/Favorite.js";
 
 function Search({
   data,
@@ -18,7 +18,7 @@ function Search({
       <button type="submit" onClick={searchCocktail}>
         Submit
       </button>
-      <Favorite></Favorite>
+      {/* <Favorite></Favorite> */}
 
       <ul>
         {/* pulls cocktails matching the input and renders them as buttons */}
