@@ -1,7 +1,16 @@
-{
-  "idUser": "test",
-  "idDrink": "9999999999",
-  "strDrink": "Luke Skywalker",
-  "strInstructions": "Testing the description",
-  "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/v0at4i1582478473.jpg"
-}
+[
+  {
+    "idUser": "testuser1",
+    "idDrink": "9999999999",
+    "strDrink": "Luke Skywalker",
+    "strInstructions": "Testing the description part 1",
+    "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/v0at4i1582478473.jpg"
+  },
+  {
+    "idUser": "testuser2",
+    "idDrink": "9999999998",
+    "strDrink": "DarthVader",
+    "strInstructions": "Testing the description part 2",
+    "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/v0at4i1582478473.jpg"
+  }
+]
