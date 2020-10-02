@@ -12,6 +12,7 @@
   overflow: scroll;
   background-color: maroon;
   border-radius: 25px;
+  padding: 10px;
 }
 
 #drinkBtn {
@@ -23,4 +24,9 @@
 #subBtn {
   background-color: #e59500;
   border-radius: 10px;
+}
+
+li {
+  list-style-type: none;
+  margin: 0 0 3px 0;
 }
