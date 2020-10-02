@@ -11,7 +11,7 @@ function Favorite(favDetails) {
   const saveFavorite = (e) => {
     e.preventDefault();
     API.saveFav(favDetails);
-    console.log("The link was clicked.");
+    // console.log("The link was clicked.");
   };
 
   return (
