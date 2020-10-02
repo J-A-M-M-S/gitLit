@@ -10,6 +10,7 @@ const Footer = () => {
       <h7>J-A-M-M-S</h7>
       <a
         href="https://github.com/J-A-M-M-S/gitLit"
+        target="blank"
         className="GitHub social"
       >
         <FontAwesomeIcon icon={faGithub} size="1x" />
