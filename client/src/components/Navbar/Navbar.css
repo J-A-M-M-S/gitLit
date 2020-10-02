@@ -1,3 +1,5 @@
-.fullbar {
+#fullbar {
   background-color: maroon;
+  width: 100%;
+  justify-content: space-between;
 }
