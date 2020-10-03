@@ -1,6 +1,28 @@
 const router = require("express").Router();
 const axios = require("axios");
 
+// ATTEMPT AT SETTING UP CALL TO GET ALL POSS COCKTAIL NAMES TO USE IN A DROP DOWN ON DRINK SEARCH
+// Currently routed for homepage but that will need to change
+
+// API call to get all possible cocktails to use in Drink Search drop down
+router.get("/", ({ params }, res) => {
+  const allCocktailNames = [];
+  axios
+    .get(
+      "https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=",
+    )
+    .then((results) => {
+      allCocktailNames.push(results.strDrink);
+      for (let i = 0; i < allCocktailNames.length; i++) {
+        let cocktailOption = allCocktailNames[i].strDrink;
+        // render all cocktail names to drop list
+        // TODO: Convert from jquery and create a dropdown with id allPossCocktails
+        // $("#allPossCocktails").append(`<option value="${cocktailOption}"> </option>`);
+      }
+      res.json(allCocktailNames);
+    });
+});
+
 // all drinks which match search input
 router.get("/search/:value", ({ params }, res) => {
   const drinksarry = [];

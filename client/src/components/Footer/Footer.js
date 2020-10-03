@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="logo" />
-      <h7>J-A-M-M-S</h7>
+      <h6>J-A-M-M-S</h6>
       <a
         href="https://github.com/J-A-M-M-S/gitLit"
         target="blank"
