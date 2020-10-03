@@ -12,6 +12,7 @@ function RandomButtons({
 }) {
   return (
     <div>
+      {/* Will require a diff API Call */}
       <button id="surpriseBtn" type="submit">
         Surprise Me
       </button>
@@ -19,10 +20,11 @@ function RandomButtons({
         id="vodkaBtn"
         type="submit"
         onClick={searchLiquor}
-        liquor={liquorSearch}
+        value={liquorSearch}
       >
         Vodka
       </button>
+      {/* Will mimic the vodka button once that is working */}
       <button id="whiskeyBtn" type="submit">
         Whiskey
       </button>
