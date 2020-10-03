@@ -5,7 +5,7 @@ const axios = require("axios");
 // Currently routed for homepage but that will need to change
 
 // API call to get all possible cocktails to use in Drink Search drop down
-router.get("/", () => {
+router.get("/", ({ params }, res) => {
   const allCocktailNames = [];
   axios
     .get(
@@ -13,13 +13,13 @@ router.get("/", () => {
     )
     .then((results) => {
       allCocktailNames.push(results.strDrink);
-      results.json(allCocktailNames);
       for (let i = 0; i < allCocktailNames.length; i++) {
         let cocktailOption = allCocktailNames[i].strDrink;
         // render all cocktail names to drop list
         // TODO: Convert from jquery and create a dropdown with id allPossCocktails
         // $("#allPossCocktails").append(`<option value="${cocktailOption}"> </option>`);
       }
+      res.json(allCocktailNames);
     });
 });
 
