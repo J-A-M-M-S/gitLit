@@ -17,4 +17,7 @@ export default {
       throw new Error("did not receive a valid ID", id);
     }
   },
+  saveFav: function () {
+    console.log("testing savfav");
+  },
 };
