@@ -1,10 +1,11 @@
 import React from "react";
-import DrinkDetails from "../components/DrinkDetails/DrinkDetails";
+import RandomButtons from "../components/RandomButtons/RandomButtons";
 
 const Roulette = () => {
   return (
     <div>
-      <h1>Roulette Insert UX/UI Here</h1>
+      <h1>Don't know what you want?</h1>
+      <RandomButtons />
     </div>
   );
 };
