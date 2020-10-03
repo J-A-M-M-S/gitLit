@@ -8,7 +8,7 @@ import "@testing-library/jest-dom/extend-expect";
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('shouldhave property home', () => {
+describe("data must be represented according to empty array and property", () => {
 
   const data = {
     id: [],
@@ -21,7 +21,7 @@ describe('shouldhave property home', () => {
   const wrapper = shallow(
     <Router><Search data={[]}/></Router>
   )
-  test("renders without exploding", () => {
+  test("data contains property listed", () => {
     expect(data).toHaveProperty("id");
   });
 });
