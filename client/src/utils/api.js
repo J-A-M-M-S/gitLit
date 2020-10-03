@@ -27,7 +27,7 @@ export default {
   },
   totalSurprise: function () {
     return axios.get(
-      process.env.REACT_APP_BACKEND_ROUTE + "/api/roulette/random",
+      process.env.REACT_APP_BACKEND_ROUTE + "/api/roulette/random/",
     );
   },
 };

@@ -103,6 +103,7 @@ router.get("/roulette/:liquor", ({ params }, res) => {
     .then((results) => {
       let possibleDrinks = response.drinks;
       const data = results.data;
+      console.log(results.data);
       // Randomly chooses a cocktail from the array of drinks containing that liquor
       var randomCocktail =
         possibleDrinks[
@@ -125,6 +126,7 @@ router.get("/roulette/random", (res) => {
       const data = results.data;
       // Target ID
       let randomSurpriseID = randomSurprise.idDrink;
+      console.log(randomSurpriseID);
       // // Passes Cocktail ID to drink deets function
       drinkDeets(randomSurpriseID);
       res.json(randomSurprise);
