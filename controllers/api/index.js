@@ -116,4 +116,19 @@ router.get("/roulette/:liquor", ({ params }, res) => {
     });
 });
 
+// API call to get random cocktail
+router.get("/roulette/random", (res) => {
+  axios
+    .get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+    .then((results) => {
+      let randomSurprise = response.drinks[0].strDrink;
+      const data = results.data;
+      // Target ID
+      let randomSurpriseID = randomSurprise.idDrink;
+      // // Passes Cocktail ID to drink deets function
+      drinkDeets(randomSurpriseID);
+      res.json(randomSurprise);
+    });
+});
+
 module.exports = router;

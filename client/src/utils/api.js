@@ -20,9 +20,14 @@ export default {
   saveFav: function () {
     console.log("testing savfav");
   },
-  searchLiquor: function (liquor) {
+  searchFromLiquor: function (liquor) {
     return axios.get(
       process.env.REACT_APP_BACKEND_ROUTE + "/api/roulette/" + liquor,
+    );
+  },
+  totalSurprise: function () {
+    return axios.get(
+      process.env.REACT_APP_BACKEND_ROUTE + "/api/roulette/random",
     );
   },
 };

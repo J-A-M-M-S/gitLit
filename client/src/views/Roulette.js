@@ -10,7 +10,7 @@ const Roulette = () => {
   const [deetsSearch, setDeetsSearch] = useState({});
 
   useEffect(() => {
-    API.searchLiquor().then((results) => {
+    API.searchFromLiquor().then((results) => {
       setdata(results.data);
     });
   }, []);
@@ -18,13 +18,13 @@ const Roulette = () => {
   const handleInputChange = (event) => {
     // Destructure the name and value properties off of event.target
     // Update the appropriate state
-    const { liquor } = event.target;
-    setLiquorSearch(liquor);
+    const { value } = event.target;
+    setLiquorSearch(value);
   };
   // API call to find all cocktails matching input
   const searchLiquor = (e) => {
     e.preventDefault();
-    API.searchLiquor(liquorSearch).then((results) => {
+    API.searchFromLiquor(liquorSearch).then((results) => {
       setdata(results.data);
     });
   };
