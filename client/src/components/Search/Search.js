@@ -16,22 +16,6 @@ function Search({
   drinkDeets,
 }) {
   return (
-<<<<<<< HEAD
-    <div>
-      <input
-        type="text"
-        value={cocktailSearch}
-        onChange={handleInputChange}
-      />
-      <button type="submit" onClick={searchCocktail} data-testid="testClick">
-        Submit
-      </button>
-
-      <ul>
-        {/* pulls cocktails matching the input and renders them as buttons */}
-        {data.map((drink, index) => (
-          <li key={index}>
-=======
     <div className="searchRes">
       <Container>
         <Row>
@@ -46,7 +30,6 @@ function Search({
                 onChange={handleInputChange}
               />
             </InputGroup>
->>>>>>> origin
             <button
               id="subBtn"
               type="submit"
