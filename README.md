@@ -3,7 +3,7 @@
 <h1 align='center'>gitLit</h1>
 <h2>💡 Project Overview</h2>
 <p>Create an App that Looks up cocktails based on the ingredients you have at home.
-<a href='https://party-of-five.github.io/gitDrunk/' target='_blank'>Live Link</a>
+<a href='https://gitlit-app.herokuapp.com/' target='_blank'>Live Link</a>
 </p>
 
 <h2>✨ User Story</h2>
@@ -24,10 +24,7 @@ SO THAT I don't have to make my own decision
 
 <details>
 <summary>✅ White board and wireframes</summary>
-<img src="./assets/img/GitDrunk1.PNG">
-<img src="./assets/img/GitDrunk2.PNG">
-<img src="./assets/img/GitDrunk3.PNG">
-<img src="./assets/img/GitDrunk4.PNG">
+<img src="./client/src/assets/GitLit.png">
 </details>
 
 <h2>⚙️ List of Technologies Used</h2>
