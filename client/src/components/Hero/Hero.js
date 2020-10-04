@@ -17,7 +17,7 @@ const Hero = () => (
               src={mixology}
             />
           </a>
-          <p class="col l8 homeBarText">
+          <p className="col l8 homeBarText">
             Have ingredients and want to explore what to make? Utilize
             our ingredient search.
           </p>
@@ -30,7 +30,7 @@ const Hero = () => (
               src={cocktailsearch}
             />
           </a>
-          <p class="col l8 homeBarText">
+          <p className="col l8 homeBarText">
             Know the name of a cocktail? Search our library for
             ingredient information and steps to create it.
           </p>
@@ -43,7 +43,7 @@ const Hero = () => (
               src={roulette}
             />
           </a>
-          <p class="col l8 homeBarText">
+          <p className="col l8 homeBarText">
             Don't know what to drink? Take a gamble with our roulette
             feature. Choose from Vodka, Taquila, Gin, Whiskey, Rum or
             get even riskier with our surprise me feature.
