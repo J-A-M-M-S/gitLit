@@ -3,11 +3,7 @@ import "./RandomButtons.css";
 
 // Assign on click to each liquor button using the data name as a value to pass into the getCocktail function
 
-function RandomButtons({
-  liquorSearch,
-  searchLiquor,
-  totalSurprise,
-}) {
+function RandomButtons({ searchLiquor, totalSurprise }) {
   return (
     <div>
       {/* Totally Random Button*/}
@@ -18,8 +14,8 @@ function RandomButtons({
       {/* Liquor Based Random Buttons */}
       <button
         id="vodkaBtn"
-        onClick={searchLiquor}
-        value={liquorSearch}
+        value="vodka"
+        onClick={(e) => searchLiquor(e.target.value)}
       >
         Vodka
       </button>
