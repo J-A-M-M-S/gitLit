@@ -5,24 +5,21 @@ import "./RandomButtons.css";
 
 function RandomButtons({
   liquorSearch,
-  handleInputChange,
   searchLiquor,
   totalSurprise,
 }) {
   return (
     <div>
       {/* Totally Random Button*/}
-      <button id="surpriseBtn" type="submit" onClick={totalSurprise}>
+      <button id="surpriseBtn" onClick={totalSurprise}>
         Surprise Me
       </button>
 
       {/* Liquor Based Random Buttons */}
       <button
         id="vodkaBtn"
-        type="submit"
         onClick={searchLiquor}
         value={liquorSearch}
-        onChange={handleInputChange}
       >
         Vodka
       </button>
