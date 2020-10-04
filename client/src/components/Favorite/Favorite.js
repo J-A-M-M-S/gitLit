@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import "./Favorite.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
 import API from "../../utils/api";
 //import DrinkDetails from "../components/DrinkDetails/DrinkDetails";
 import { useAuth0 } from "@auth0/auth0-react";
+
+library.add(fas);
 
 function Favorite(favDetails) {
   const [newFav, setnewFav] = useState(false);
@@ -13,7 +17,7 @@ function Favorite(favDetails) {
   const saveFavorite = (e) => {
     e.preventDefault();
     console.log(user);
-    setnewFav(API.saveFav(user.sub, favDetails.favDetails.name));
+    setnewFav(API.saveFav(user.email, favDetails.favDetails.name));
     // console.log("The link was clicked.");
   };
   if (newFav) {
