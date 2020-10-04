@@ -7,7 +7,7 @@ import cocktailsearch from "../../assets/img/cocktailsearch.jpg";
 const Hero = () => (
   <div className="hero">
     <main>
-      <a href="./ingredientsearch.html">
+      <a href="./mixology">
         <img
           alt=" for Mixology page"
           className="ingredImg"
@@ -19,7 +19,7 @@ const Hero = () => (
         ingredient search.
       </p>
 
-      <a href="./drinksearch.html">
+      <a href="./drinksearch">
         <img
           alt=" for Cocktails page"
           className="cocktailImg"
@@ -31,7 +31,7 @@ const Hero = () => (
         information and steps to create it.
       </p>
 
-      <a href="./roulette.html">
+      <a href="./roulette">
         <img
           alt=" for Roulette page"
           className="rouletteImg"
