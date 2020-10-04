@@ -3,8 +3,13 @@
   padding: 30px;
   display: flex;
   flex-direction: column;
+  max-height: 400px;
   /* background-color: #a30707be; */
   border-radius: 25px;
+  background-color: maroon;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  overflow: scroll;
 }
 
 .drinkDetails img {
@@ -17,9 +22,19 @@
   display: flex;
   justify-content: center;
   padding-bottom: 20px;
+  color: white;
 }
 
 #drinkImage {
   display: flex;
   justify-content: center;
+  color: white;
+}
+
+#drinkInt {
+  color: white;
+}
+
+#drinkIng {
+  color: white;
 }

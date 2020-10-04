@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "./DrinkDetails.css";
+import Favorite from "../Favorite/Favorite.js";
 
 //Concatinates ingredients and measurements then pushes them into an array before rendering
 function DrinkDetails({ details }) {
@@ -19,17 +20,17 @@ function DrinkDetails({ details }) {
   return (
     <Container className="drinkDetails">
       <Row id="drinkName">
-        <h3>{details.name}</h3>
+        <h3>{(details.name, (<Favorite favDetails={details} />))}</h3>
       </Row>
       <Row>
         <Col id="drinkImage">
           <img src={details.image} alt={details.name} />
         </Col>
-        <Col>
+        <Col id="drinkInt">
           <Row>
             <p>{details.instructions}</p>
           </Row>
-          <Row>
+          <Row id="drinkIng">
             <ol>
               {steps.map(({ id, ing, measure }) => {
                 return (
