@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import "./Hero.css";
-import mixology from "../../assets/img/Mixology.jpg";
+// import mixology from "../../assets/img/Mixology.jpg";
 import roulette from "../../assets/img/roulette.jpg";
 import cocktailsearch from "../../assets/img/cocktailsearch.jpg";
 
@@ -9,7 +9,7 @@ const Hero = () => (
   <Container>
     <div className="hero">
       <main>
-        <Row>
+        {/* <Row>
           <a href="./mixology">
             <img
               alt=" for Mixology page"
@@ -21,7 +21,7 @@ const Hero = () => (
             Have ingredients and want to explore what to make? Utilize
             our ingredient search.
           </p>
-        </Row>
+        </Row> */}
         <Row>
           <a href="./drinksearch">
             <img

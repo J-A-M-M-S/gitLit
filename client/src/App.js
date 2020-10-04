@@ -4,13 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { NavBar, Footer, Loading, PrivateRoute } from "./components";
 import "./App.css";
-import {
-  Home,
-  Profile,
-  Mixology,
-  DrinkSearch,
-  Roulette,
-} from "./views";
+import { Home, Profile, DrinkSearch, Roulette } from "./views";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const App = () => {
@@ -28,7 +22,7 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={Home} />
           <PrivateRoute path="/Profile" component={Profile} />
-          <Route path="/Mixology" component={Mixology} />
+          {/* <Route path="/Mixology" component={Mixology} /> */}
           <Route path="/DrinkSearch" component={DrinkSearch} />
           <Route path="/Roulette" component={Roulette} />
         </Switch>
