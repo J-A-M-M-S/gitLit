@@ -22,6 +22,12 @@ const Roulette = () => {
       setDeetsSearch(results.data);
     });
   };
+
+  const surpriseCocktail = () => {
+    API.totalSurprise().then((results) => {
+      setdata(results.data);
+    });
+  };
   return (
     <div>
       <h1>Don't know what you want?</h1>
@@ -29,6 +35,7 @@ const Roulette = () => {
         data={data}
         searchLiquor={searchLiquor}
         drinkDeets={drinkDeets}
+        surpriseCocktail={surpriseCocktail}
       />
       <DrinkDetails details={deetsSearch} />
     </div>
