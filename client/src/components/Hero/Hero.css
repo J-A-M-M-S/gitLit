@@ -5,6 +5,13 @@
   padding: 0;
 }
 
+.ingredImg,
+.rouletteImg,
+.cocktailImg {
+  width: 125px;
+  height: 125px;
+}
+
 .ingredImg {
   width: 125px;
   height: 125px;

@@ -1,5 +1,8 @@
 import React from "react";
 import "./Hero.css";
+import mixology from "../../assets/img/Mixology.jpg";
+import roulette from "../../assets/img/roulette.jpg";
+import cocktailsearch from "../../assets/img/cocktailsearch.jpg";
 
 const Hero = () => (
   <div className="hero">
@@ -8,7 +11,7 @@ const Hero = () => (
         <img
           alt=" for Mixology page"
           className="ingredImg"
-          src="../../assets/img/Mixology.jpg"
+          src={mixology}
         />
       </a>
       <p class="col l8 homeBarText">
@@ -20,8 +23,7 @@ const Hero = () => (
         <img
           alt=" for Cocktails page"
           className="cocktailImg"
-          src="../../assets/img/funDrinks.jpg"
-          style="width: 125px; height: 125px;"
+          src={cocktailsearch}
         />
       </a>
       <p class="col l8 homeBarText">
@@ -33,28 +35,13 @@ const Hero = () => (
         <img
           alt=" for Roulette page"
           className="rouletteImg"
-          src="../../assets/img/roulette.jpg"
-          style="width: 125px; height: 125px;"
+          src={roulette}
         />
       </a>
       <p class="col l8 homeBarText">
         Don't know what to drink? Take a gamble with our roulette
         feature. Choose from Vodka, Taquila, Gin, Whiskey, Rum or get
         even riskier with our surprise me feature.
-      </p>
-
-      <a href="./thepub.html">
-        <img
-          alt=" for Pub page"
-          className="pubImg"
-          src="../../assets/img/pintglass.jpg"
-          style="width: 125px; height: 125px;"
-        />
-      </a>
-      <p class="col l8 homeBarText">
-        Not a cocktail person? Perhaps you would enjoy a refreshing
-        brew. Let us know how potent you like your beer and we'll make
-        a suggestion.
       </p>
     </main>
   </div>
