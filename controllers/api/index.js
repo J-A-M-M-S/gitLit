@@ -96,7 +96,6 @@ router.get("/search/drinksearch/:id", ({ params }, res) => {
 // API call to get random cocktail based on selected liquor
 router.get("/roulette/:liquor", ({ params }, res) => {
   const liquorChoice = params.liquor;
-  console.log(liquorChoice);
   axios
     .get(
       `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${liquorChoice}`,
