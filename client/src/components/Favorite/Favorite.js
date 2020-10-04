@@ -4,6 +4,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import API from "../../utils/api";
 //import DrinkDetails from "../components/DrinkDetails/DrinkDetails";
 import { useAuth0 } from "@auth0/auth0-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Favorite(favDetails) {
   const [newFav, setnewFav] = useState(false);
