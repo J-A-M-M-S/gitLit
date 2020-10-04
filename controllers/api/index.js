@@ -119,6 +119,7 @@ router.get("/roulette/:liquor", ({ params }, res) => {
 
 // API call to get totally random cocktail
 router.get("/roulette/random", (res) => {
+  console.log("calling random drink");
   axios
     .get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
     .then((results) => {
