@@ -89,26 +89,26 @@ router.get("/search/drinksearch/:id", ({ params }, res) => {
         measure15: element.strMeasure15,
       };
       res.json(drinkDetails);
-      // console.log(drinkDetails);
     });
 });
 
 // API call to get random cocktail based on selected liquor
 router.get("/roulette/:liquor", ({ params }, res) => {
   const liquorChoice = params.liquor;
+  const possibleDrinks = [];
   axios
     .get(
       `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${liquorChoice}`,
     )
     .then((results) => {
-      let possibleDrinks = response.drinks;
+      console.log(results.drinks);
+      possibleDrinks = results.drinks;
       const data = results.data;
       // Randomly chooses a cocktail from the array of drinks containing that liquor
       var randomCocktail =
         possibleDrinks[
           Math.floor(Math.random() * possibleDrinks.length)
         ];
-      console.log(randomCocktail);
       // Target ID
       let randomCocktailID = randomCocktail.idDrink;
       // // Passes Cocktail ID to drink deets function

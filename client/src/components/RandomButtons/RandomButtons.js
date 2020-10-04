@@ -7,7 +7,7 @@ function RandomButtons({ data, searchLiquor, surpriseCocktail }) {
   return (
     <div>
       {/* Totally Random Button*/}
-      <button id="surpriseBtn" onClick={surpriseCocktail}>
+      <button id="surpriseBtn" onClick={() => surpriseCocktail()}>
         Surprise Me
       </button>
 
