@@ -4,9 +4,9 @@ import { Hero, Content } from "../components";
 
 const Home = () => (
   <Fragment>
+    <Content />
     <Hero />
     <hr />
-    <Content />
   </Fragment>
 );
 
