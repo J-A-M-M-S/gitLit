@@ -21,14 +21,14 @@ describe("Navbar tab Profile", () => {
     );
     expect(container).toContainHTML("Home");
   });
-  test("The mixology tab is rendering", () => {
-    const { container } = render(
-      <Router>
-        <Navbar />
-      </Router>,
-    );
-    expect(container).toContainHTML("Mixology");
-  });
+  // test("The mixology tab is rendering", () => {
+  //   const { container } = render(
+  //     <Router>
+  //       <Navbar />
+  //     </Router>,
+  //   );
+  //   expect(container).toContainHTML("Mixology");
+  // });
   test("The drink search is rendering", () => {
     const { container } = render(
       <Router>

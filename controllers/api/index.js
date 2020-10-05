@@ -1,5 +1,7 @@
 const router = require("express").Router();
 const axios = require("axios");
+// const db = require("../models");
+// const { model } = require(".../models/drinks");
 
 // ATTEMPT AT SETTING UP CALL TO GET ALL POSS COCKTAIL NAMES TO USE IN A DROP DOWN ON DRINK SEARCH
 // Currently routed for homepage but that will need to change
@@ -133,5 +135,27 @@ router.get("/roulette/random", (res) => {
       res.json(randomSurprise);
     });
 });
+
+// // Create Favorites list in database
+// router.post("/api/favorites", (req, res) => {
+//   db.Favorites.create({})
+//   .then(dbFavorites => {
+//     res.json(dbFavorites);
+//   })
+//   .catch(err => {
+//     res.json(err);
+//   });
+// });
+
+// // Adding drink to Favorites list
+// router.put("/api/favorites/:id", ({body,params}, res) =>{
+//   db.Favorites.findByIdAndUpdate(params.id, {$push: { drinks: body } }, {new: true})
+//   .then(dbFavorites => {
+//     res.json(dbFavorites);
+//   })
+//   .catch(err => {
+//     res.json(err);
+//   })
+// })
 
 module.exports = router;
