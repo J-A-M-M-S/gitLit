@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/api";
 import Search from "../components/Search/Search";
-import Autocomplete from "../components/Autocomplete/Autocomplete";
 import DrinkDetails from "../components/DrinkDetails/DrinkDetails";
 
 const DrinkSearch = () => {
@@ -37,7 +36,7 @@ const DrinkSearch = () => {
   };
   return (
     <div>
-      <Autocomplete />
+      
       <Search
         data={data}
         cocktailSearch={cocktailSearch}
