@@ -1,5 +1,7 @@
 const router = require("express").Router();
 const axios = require("axios");
+// const db = require("../models");
+// const { model } = require(".../models/drinks");
 
 // ATTEMPT AT SETTING UP CALL TO GET ALL POSS COCKTAIL NAMES TO USE IN A DROP DOWN ON DRINK SEARCH
 // Currently routed for homepage but that will need to change
@@ -92,5 +94,67 @@ router.get("/search/drinksearch/:id", ({ params }, res) => {
       // console.log(drinkDetails);
     });
 });
+
+// API call to get random cocktail based on selected liquor
+router.get("/roulette/:liquor", ({ params }, res) => {
+  const liquorChoice = params.liquor;
+  axios
+    .get(
+      `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${liquorChoice}`,
+    )
+    .then((results) => {
+      let possibleDrinks = response.drinks;
+      const data = results.data;
+      console.log(results.data);
+      // Randomly chooses a cocktail from the array of drinks containing that liquor
+      var randomCocktail =
+        possibleDrinks[
+          Math.floor(Math.random() * possibleDrinks.length)
+        ];
+      // Target ID
+      let randomCocktailID = randomCocktail.idDrink;
+      // // Passes Cocktail ID to drink deets function
+      drinkDeets(randomCocktailID);
+      res.json(randomCocktail);
+    });
+});
+
+// API call to get random cocktail
+router.get("/roulette/random", (res) => {
+  axios
+    .get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+    .then((results) => {
+      let randomSurprise = response.drinks[0].strDrink;
+      const data = results.data;
+      // Target ID
+      let randomSurpriseID = randomSurprise.idDrink;
+      console.log(randomSurpriseID);
+      // // Passes Cocktail ID to drink deets function
+      drinkDeets(randomSurpriseID);
+      res.json(randomSurprise);
+    });
+});
+
+// // Create Favorites list in database
+// router.post("/api/favorites", (req, res) => {
+//   db.Favorites.create({})
+//   .then(dbFavorites => {
+//     res.json(dbFavorites);
+//   })
+//   .catch(err => {
+//     res.json(err);
+//   });
+// });
+
+// // Adding drink to Favorites list
+// router.put("/api/favorites/:id", ({body,params}, res) =>{
+//   db.Favorites.findByIdAndUpdate(params.id, {$push: { drinks: body } }, {new: true})
+//   .then(dbFavorites => {
+//     res.json(dbFavorites);
+//   })
+//   .catch(err => {
+//     res.json(err);
+//   })
+// })
 
 module.exports = router;
