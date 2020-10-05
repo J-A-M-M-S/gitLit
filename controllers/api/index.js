@@ -96,8 +96,8 @@ router.get("/search/drinksearch/:id", ({ params }, res) => {
 
 // API call to get random cocktail based on selected liquor
 router.get("/roulette/:liquor", ({ params }, res) => {
-  const liquorChoice = params.liquor;
-  const possibleDrinks = [];
+  let liquorChoice = params.liquor;
+  let possibleDrinks = [];
   axios
     .get(
       `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${liquorChoice}`,
@@ -105,7 +105,7 @@ router.get("/roulette/:liquor", ({ params }, res) => {
     .then((results) => {
       console.log(results.drinks);
       possibleDrinks = results.drinks;
-      const data = results.data;
+      let data = results.data;
       // Randomly chooses a cocktail from the array of drinks containing that liquor
       var randomCocktail =
         possibleDrinks[
@@ -126,7 +126,7 @@ router.get("/roulette/random", (res) => {
     .get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
     .then((results) => {
       let randomSurprise = results.drinks[0].strDrink;
-      const data = results.data;
+      let data = results.data;
       // Target ID
       let randomSurpriseID = randomSurprise.idDrink;
       console.log(randomSurprise);
