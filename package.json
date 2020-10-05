@@ -70,9 +70,11 @@
     "mysql2": "^1.6.5",
     "react-autocomplete": "^1.8.1",
     "react-bootstrap": "^1.3.0",
+    "react-bootstrap-typeahead": "^5.1.1",
     "react-dom": "^16.13.1",
     "save-dev": "0.0.1-security",
-    "sequelize": "^5.8.9"
+    "sequelize": "^5.8.9",
+    "typeahead": "^0.2.2"
   },
   "jest": {
     "setupFilesAfterEnv": [

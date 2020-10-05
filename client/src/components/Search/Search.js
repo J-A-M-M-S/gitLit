@@ -21,12 +21,12 @@ function Search({
 
   const [singleSelections, setSingleSelections] = useState([]);
 
-  useEffect(()=>{
-    API.allCocktailNames().then((results) => {
-      setSingleSelections(results.data);
-    });
-    console.log(results.data)
-  },[])
+  // useEffect(()=>{
+  //   API.allCocktailNames().then((results) => {
+  //     setSingleSelections(results.data);
+  //   });
+  //   console.log(results.data)
+  // },[])
 
   return (
     <div className="searchRes">
