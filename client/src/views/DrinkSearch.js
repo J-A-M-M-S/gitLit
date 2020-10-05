@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/api";
 import Search from "../components/Search/Search";
-import DrinkDetails from "../components/DrinkDetails/DrinkDetails";
+// import DrinkDetails from "../components/DrinkDetails/DrinkDetails";
 
 const DrinkSearch = () => {
   //  Sets state for drink and ingredient searches
   const [data, setdata] = useState([]);
   const [cocktailSearch, setCocktailSearch] = useState("");
-  const [deetsSearch, setDeetsSearch] = useState({});
+  // const [deetsSearch, setDeetsSearch] = useState({});
 
   useEffect(() => {
     API.searchDrinks().then((results) => {
@@ -29,11 +29,11 @@ const DrinkSearch = () => {
     });
   };
   // API call to get selected drinks details
-  const drinkDeets = (id) => {
-    API.drinkInfo(id).then((results) => {
-      setDeetsSearch(results.data);
-    });
-  };
+  // const drinkDeets = (id) => {
+  //   API.drinkInfo(id).then((results) => {
+  //     setDeetsSearch(results.data);
+  //   });
+  // };
   return (
     <div>
       <Search
@@ -41,9 +41,9 @@ const DrinkSearch = () => {
         cocktailSearch={cocktailSearch}
         handleInputChange={handleInputChange}
         searchCocktail={searchCocktail}
-        drinkDeets={drinkDeets}
+        // drinkDeets={drinkDeets}
       />
-      <DrinkDetails details={deetsSearch} />
+      {/* <DrinkDetails details={deetsSearch} /> */}
     </div>
   );
 };

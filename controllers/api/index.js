@@ -103,7 +103,6 @@ router.get("/roulette/:liquor", ({ params }, res) => {
       `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${liquorChoice}`,
     )
     .then((results) => {
-      console.log(results.drinks);
       possibleDrinks = results.drinks;
       let data = results.data;
       // Randomly chooses a cocktail from the array of drinks containing that liquor
@@ -111,10 +110,11 @@ router.get("/roulette/:liquor", ({ params }, res) => {
         possibleDrinks[
           Math.floor(Math.random() * possibleDrinks.length)
         ];
+      console.log(randomCocktail);
       // Target ID
       let randomCocktailID = randomCocktail.idDrink;
       // // Passes Cocktail ID to drink deets function
-      drinkDeets(randomCocktailID);
+      // drinkDeets(randomCocktailID);
       res.json(possibleDrinks);
     });
 });
@@ -131,7 +131,7 @@ router.get("/roulette/random", (res) => {
       let randomSurpriseID = randomSurprise.idDrink;
       console.log(randomSurprise);
       // // Passes Cocktail ID to drink deets function
-      drinkDeets(randomSurpriseID);
+      // drinkDeets(randomSurpriseID);
       res.json(randomSurprise);
     });
 });
