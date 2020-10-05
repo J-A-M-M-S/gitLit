@@ -4,6 +4,12 @@ const axios = require("axios");
 // ATTEMPT AT SETTING UP CALL TO GET ALL POSS COCKTAIL NAMES TO USE IN A DROP DOWN ON DRINK SEARCH
 // Currently routed for homepage but that will need to change
 
+router.get("/alldrinks", (req, res)=> {
+  axios.get("https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list").then(results => {
+    res.json(results.drinksarray)
+  })
+})
+
 // API call to get all possible cocktails to use in Drink Search drop down
 router.get("/", ({ params }, res) => {
   const allCocktailNames = [];
