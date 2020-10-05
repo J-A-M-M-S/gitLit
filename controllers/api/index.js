@@ -125,7 +125,7 @@ router.get("/roulette/random", (res) => {
   axios
     .get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
     .then((results) => {
-      let randomSurprise = response.drinks[0].strDrink;
+      let randomSurprise = results.drinks[0].strDrink;
       const data = results.data;
       // Target ID
       let randomSurpriseID = randomSurprise.idDrink;
