@@ -27,14 +27,14 @@ const MainNav = () => (
         >
           Profile
         </Nav.Link>
-        <Nav.Link
+        {/* <Nav.Link
           as={RouterNavLink}
           to="/mixology"
           exact
           className="router-link-exact-active"
         >
           Mixology
-        </Nav.Link>
+        </Nav.Link> */}
         <Nav.Link
           as={RouterNavLink}
           to="/drinksearch"
