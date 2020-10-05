@@ -23,8 +23,8 @@ const App = () => {
           <Route path="/" exact component={Home} />
           <PrivateRoute path="/Profile" component={Profile} />
           {/* <Route path="/Mixology" component={Mixology} /> */}
-          <Route path="/DrinkSearch" component={DrinkSearch} />
-          <Route path="/Roulette" component={Roulette} />
+          <PrivateRoute path="/DrinkSearch" component={DrinkSearch} />
+          <PrivateRoute path="/Roulette" component={Roulette} />
         </Switch>
       </Container>
       <Footer />
