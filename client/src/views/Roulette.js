@@ -11,20 +11,12 @@ const Roulette = () => {
 
   // API call to find all cocktails matching input
   const searchLiquor = (value) => {
-    console.log(value);
     API.searchFromLiquor(value).then((results) => {
-      // setdata(results.data);
       API.drinkInfo(results.data).then((results) => {
         setSurpriseSearch(results.data);
       });
     });
   };
-  // API call to get selected drinks details
-  // const drinkDeets = (id) => {
-  //   API.drinkInfo(id).then((results) => {
-  //     setDeetsSearch(results.data);
-  //   });
-  // };
 
   const surpriseCocktail = () => {
     API.totalSurprise().then((results) => {
@@ -37,7 +29,6 @@ const Roulette = () => {
       <RandomButtons
         data={data}
         searchLiquor={searchLiquor}
-        // drinkDeets={drinkDeets}
         surpriseCocktail={surpriseCocktail}
       />
       <DrinkDetails details={surpriseSearch} />
