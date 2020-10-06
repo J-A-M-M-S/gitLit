@@ -18,19 +18,30 @@ export default {
     }
   },
   saveFav: function (userid, favorite) {
-    let newFav = false;
-    let favorites = JSON.parse(localStorage.getItem(userid)) || [];
-    if (
-      favorites.length === 0 ||
-      favorites.indexOf(favorite) === -1
-    ) {
-      favorites.push(favorite);
-      newFav = true;
+    if (userid) {
+      return axios.post(
+        process.env.REACT_APP_BACKEND_ROUTE + "/api/api/savfavorites",
+        {
+          id: userid,
+          name: favorite,
+        },
+      );
     } else {
-      favorites = favorites.filter((fav) => fav !== favorite);
+      throw new Error("no user found", userid);
     }
-    localStorage.setItem(userid, JSON.stringify(favorites));
-    return newFav;
+    // let newFav = false;
+    // let favorites = JSON.parse(localStorage.getItem(userid)) || [];
+    // if (
+    //   favorites.length === 0 ||
+    //   favorites.indexOf(favorite) === -1
+    // ) {
+    //   favorites.push(favorite);
+    //   newFav = true;
+    // } else {
+    //   favorites = favorites.filter((fav) => fav !== favorite);
+    // }
+    // localStorage.setItem(userid, JSON.stringify(favorites));
+    // return newFav;
   },
 
   getFavorites: function (userid) {
