@@ -26,7 +26,6 @@ const Roulette = () => {
   const surpriseCocktail = () => {
     API.totalSurprise().then((results) => {
       setSurpriseSearch(results.data);
-      console.log(surpriseSearch);
     });
   };
   return (
