@@ -17,20 +17,45 @@ export default {
       throw new Error("did not receive a valid ID", id);
     }
   },
-  saveFav: function (userid, favorite) {
-    let newFav = false;
-    let favorites = JSON.parse(localStorage.getItem(userid)) || [];
-    if (
-      favorites.length === 0 ||
-      favorites.indexOf(favorite) === -1
-    ) {
-      favorites.push(favorite);
-      newFav = true;
+  saveFav: function (userid, favorite, img) {
+    if (userid) {
+      return axios.post(
+        process.env.REACT_APP_BACKEND_ROUTE + "/api/api/savfavorites",
+        {
+          id: userid,
+          name: favorite,
+          image: img,
+        },
+      );
     } else {
-      favorites = favorites.filter((fav) => fav !== favorite);
+      throw new Error("no user found", userid);
     }
-    localStorage.setItem(userid, JSON.stringify(favorites));
-    return newFav;
+    // let newFav = false;
+    // let favorites = JSON.parse(localStorage.getItem(userid)) || [];
+    // if (
+    //   favorites.length === 0 ||
+    //   favorites.indexOf(favorite) === -1
+    // ) {
+    //   favorites.push(favorite);
+    //   newFav = true;
+    // } else {
+    //   favorites = favorites.filter((fav) => fav !== favorite);
+    // }
+    // localStorage.setItem(userid, JSON.stringify(favorites));
+    // return newFav;
+  },
+
+  getFav: function (userid) {
+    if (userid) {
+      return axios.post(
+        process.env.REACT_APP_BACKEND_ROUTE + "/api/api/getfavorites",
+        {
+          id: userid,
+        },
+      );
+    } else {
+      throw new Error("no user found", userid);
+    }
   },
 
   getFavorites: function (userid) {

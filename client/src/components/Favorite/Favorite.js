@@ -13,7 +13,13 @@ function Favorite(favDetails) {
   const saveFavorite = (e) => {
     e.preventDefault();
     console.log(user);
-    setnewFav(API.saveFav(user.email, favDetails.favDetails.name));
+    setnewFav(
+      API.saveFav(
+        user.email,
+        favDetails.favDetails.name,
+        favDetails.favDetails.image,
+      ),
+    );
     // console.log("The link was clicked.");
   };
   if (newFav) {
