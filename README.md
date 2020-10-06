@@ -6,13 +6,11 @@
 <a href='https://gitlit-app.herokuapp.com/' target='_blank'>Live Link</a>
 </p>
 
+![Check it out](client/src/assets/img/gitLitHome.png)
+
 <h2>✨ User Story</h2>
 
 ```
-AS A HOST with only a handful of ingredients on hand
-I WANT to find what cocktails I can make based on the ingredients
-SO THAT I don't have to go to the store
-
 AS A DRINKER with a specific cocktail in mind
 I WANT the ingredients and steps to make that cocktail
 SO THAT I can make the cocktail I want
@@ -20,6 +18,10 @@ SO THAT I can make the cocktail I want
 AS AN INDECISIVE PERSON that only knows what kind of liquor they want
 I WANT someone to pick a drink/recipe for me
 SO THAT I don't have to make my own decision
+
+AS A FREQUENT BARTENDER that never remembers recipes
+I WANT a place to store the ones I like
+SO THAT I don't have to search them every time
 ```
 
 <details>
@@ -36,12 +38,12 @@ SO THAT I don't have to make my own decision
     <li>Express</li>
     <li>React</li>
     <li>MongoDB</li>
+    <li>MongoDB Atlas</li>
     <li>Auth0</li>
     <li>Postman</li>
     <li>Heroku</li>
-    <li><a href='https://materializecss.com/'>React Bootsrap</a></li>
+    <li><a href='https://react-bootstrap.github.io/' target='_blank'>React Bootsrap</a></li>
     <li><a href='https://www.thecocktaildb.com/api.php' target='_blank'>The CocktailDB API</a></li>
-    <li><a href='https://api.punkapi.com/v2/beers' target='_blank'>Punk Beer API</a></li>
 
 </ul>
 <h2>📓 Contributor(s)</h2>
@@ -90,13 +92,10 @@ https://github.com/orgs/J-A-M-M-S/projects/1?add_cards_query=is%3Aopen
 - THEN I am given the option to login or sign up
 
 - WHEN I login
-- THEN I am given the option of 4 pages
+- THEN I am given the option of 3 pages
 
-- WHEN I want to search by ingredients
-- THEN I can enter what I have
-
-- WHEN I click submit
-- THEN I am given a list of possible cocktails
+- WHEN I want to see my profile and favorite drinks
+- THEN I can view that info on my Profile page
 
 - WHEN I choose the cocktail I want
 - THEN I am given the recipe and photo
@@ -108,17 +107,10 @@ https://github.com/orgs/J-A-M-M-S/projects/1?add_cards_query=is%3Aopen
 - THEN I am given the recipe and photo
 
 - WHEN I want a random cocktail
-- THEN I am given 5 base liqour options
+- THEN I am given 4 base liqour options or a totally random button
 
 - WHEN I click my preferred liquor
-- THEN I am given a random cocktail recipe using that liquor
+- THEN I am given a random cocktail recipe that uses that
 
 - WHEN I favorite a cocktail
 - THEN It is added to my favorites list
-
-- WHEN I click the favorites page
-- THEN I am shown a list of my favorite cocktails
-
-<h2>🎉 The following animation demonstrates the application's functionality:</h2>
-
-![PlaceHolder]()
