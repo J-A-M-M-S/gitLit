@@ -159,15 +159,10 @@ router.get("/roulette/:liquor", ({ params }, res) => {
           possibleDrinks[
             Math.floor(Math.random() * possibleDrinks.length)
           ];
-        console.log(randomCocktail);
         // Target ID
         let randomCocktailID = randomCocktail.idDrink;
-        // // Passes Cocktail ID to drink deets function
-        // drinkDeets(randomCocktailID);
-        console.log(randomCocktailID);
         res.json(randomCocktailID);
       } else {
-        console.log("This is still broken");
         res.send("nothing found");
       }
     });
