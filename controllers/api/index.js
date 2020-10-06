@@ -14,7 +14,7 @@ router.get("/", ({ params }, res) => {
       "https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=",
     )
     .then((results) => {
-      allCocktailNames.push(results.strDrink);
+      allCocktailNames.push(results.data.strDrink);
       for (let i = 0; i < allCocktailNames.length; i++) {
         let cocktailOption = allCocktailNames[i].strDrink;
         // render all cocktail names to drop list
@@ -94,6 +94,28 @@ router.get("/search/drinksearch/:id", ({ params }, res) => {
     });
 });
 
+// API call to get totally random cocktail
+router.get("/roulette/random", ({ params }, res) => {
+  console.log("calling random drink");
+  axios
+    .get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+    .then((results) => {
+      if (results.data.drinks) {
+        let randomSurprise = results.data.drinks[0].strDrink;
+        let data = results.data;
+        // Target ID
+        let randomSurpriseID = randomSurprise.idDrink;
+        console.log(randomSurprise);
+        // // Passes Cocktail ID to drink deets function
+        // drinkDeets(randomSurpriseID);
+        res.send(randomSurprise);
+      } else {
+        console.log("This is still broken");
+        res.send("nothing found");
+      }
+    });
+});
+
 // API call to get random cocktail based on selected liquor
 router.get("/roulette/:liquor", ({ params }, res) => {
   let liquorChoice = params.liquor;
@@ -103,36 +125,25 @@ router.get("/roulette/:liquor", ({ params }, res) => {
       `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${liquorChoice}`,
     )
     .then((results) => {
-      possibleDrinks = results.drinks;
-      let data = results.data;
-      // Randomly chooses a cocktail from the array of drinks containing that liquor
-      var randomCocktail =
-        possibleDrinks[
-          Math.floor(Math.random() * possibleDrinks.length)
-        ];
-      console.log(randomCocktail);
-      // Target ID
-      let randomCocktailID = randomCocktail.idDrink;
-      // // Passes Cocktail ID to drink deets function
-      // drinkDeets(randomCocktailID);
-      res.json(possibleDrinks);
-    });
-});
-
-// API call to get totally random cocktail
-router.get("/roulette/random", (res) => {
-  console.log("calling random drink");
-  axios
-    .get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
-    .then((results) => {
-      let randomSurprise = results.drinks[0].strDrink;
-      let data = results.data;
-      // Target ID
-      let randomSurpriseID = randomSurprise.idDrink;
-      console.log(randomSurprise);
-      // // Passes Cocktail ID to drink deets function
-      // drinkDeets(randomSurpriseID);
-      res.json(randomSurprise);
+      console.log(results.data.drinks);
+      if (results.data.drinks.length) {
+        const possibleDrinks = results.data.drinks;
+        // let data = results.data;
+        // Randomly chooses a cocktail from the array of drinks containing that liquor
+        var randomCocktail =
+          possibleDrinks[
+            Math.floor(Math.random() * possibleDrinks.length)
+          ];
+        console.log(randomCocktail);
+        // Target ID
+        let randomCocktailID = randomCocktail.idDrink;
+        // // Passes Cocktail ID to drink deets function
+        // drinkDeets(randomCocktailID);
+        res.json(possibleDrinks);
+      } else {
+        console.log("This is still broken");
+        res.send("nothing found");
+      }
     });
 });
 
