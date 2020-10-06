@@ -20,7 +20,10 @@ function DrinkDetails({ details }) {
   return (
     <Container className="drinkDetails">
       <Row id="drinkName">
-        <h3>{(details.name, (<Favorite favDetails={details} />))}</h3>
+        <h3>{details.name}</h3>
+      </Row>
+      <Row id="favBtn">
+        <Favorite favDetails={details} />
       </Row>
       <Row>
         <Col id="drinkImage">

@@ -5,15 +5,20 @@ import "./RandomButtons.css";
 
 function RandomButtons({ searchLiquor, surpriseCocktail }) {
   return (
-    <div>
+    <div id="barBtn">
       {/* Totally Random Button*/}
-      <button id="surpriseBtn" onClick={() => surpriseCocktail()}>
+      <button
+        id="surpriseBtn"
+        className="bullet"
+        onClick={() => surpriseCocktail()}
+      >
         Surprise Me
       </button>
 
       {/* Liquor Based Random Buttons */}
       <button
         id="vodkaBtn"
+        className="bullet"
         value="vodka"
         onClick={(e) => searchLiquor(e.target.value)}
       >
@@ -21,6 +26,7 @@ function RandomButtons({ searchLiquor, surpriseCocktail }) {
       </button>
       <button
         id="whiskeyBtn"
+        className="bullet"
         value="whiskey"
         onClick={(e) => searchLiquor(e.target.value)}
       >
@@ -28,6 +34,7 @@ function RandomButtons({ searchLiquor, surpriseCocktail }) {
       </button>
       <button
         id="tequilaBtn"
+        className="bullet"
         value="tequila"
         onClick={(e) => searchLiquor(e.target.value)}
       >
@@ -35,6 +42,7 @@ function RandomButtons({ searchLiquor, surpriseCocktail }) {
       </button>
       <button
         id="rumBtn"
+        className="bullet"
         value="rum"
         onClick={(e) => searchLiquor(e.target.value)}
       >

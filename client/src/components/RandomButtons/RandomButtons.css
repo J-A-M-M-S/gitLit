@@ -1,0 +1,10 @@
+#barBtn {
+  display: flex;
+  justify-content: center;
+}
+.bullet {
+  background-color: #e59500;
+  border-radius: 10px;
+  margin: 10px;
+  width: 130px;
+}
