@@ -170,8 +170,24 @@ router.get("/roulette/:liquor", ({ params }, res) => {
 });
 
 router.post("/api/savfavorites", (req, res) => {
-  console.log("test", req.body.id);
-  db.create({ id: req.body.id, name: req.body.name })
+  db.create({
+    id: req.body.id,
+    name: req.body.name,
+    image: req.body.image,
+  })
+    .then((dbFavorites) => {
+      res.json(dbFavorites);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
+});
+
+router.get("/api/getfavorites", (req, res) => {
+  console.log(req.body.id);
+  db.find({
+    id: req.body.id,
+  })
     .then((dbFavorites) => {
       res.json(dbFavorites);
     })

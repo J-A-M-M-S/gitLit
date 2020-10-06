@@ -17,13 +17,14 @@ export default {
       throw new Error("did not receive a valid ID", id);
     }
   },
-  saveFav: function (userid, favorite) {
+  saveFav: function (userid, favorite, img) {
     if (userid) {
       return axios.post(
         process.env.REACT_APP_BACKEND_ROUTE + "/api/api/savfavorites",
         {
           id: userid,
           name: favorite,
+          image: img,
         },
       );
     } else {
@@ -42,6 +43,19 @@ export default {
     // }
     // localStorage.setItem(userid, JSON.stringify(favorites));
     // return newFav;
+  },
+
+  getFav: function (userid) {
+    if (userid) {
+      return axios.get(
+        process.env.REACT_APP_BACKEND_ROUTE + "/api/api/getfavorites",
+        {
+          id: userid,
+        },
+      );
+    } else {
+      throw new Error("no user found", userid);
+    }
   },
 
   getFavorites: function (userid) {
