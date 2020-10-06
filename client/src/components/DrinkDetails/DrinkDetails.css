@@ -21,7 +21,7 @@
 #drinkName {
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   color: white;
 }
 
@@ -37,4 +37,10 @@
 
 #drinkIng {
   color: white;
+}
+
+#favBtn {
+  justify-content: center;
+  font-size: 30px;
+  padding-bottom: 10px;
 }
