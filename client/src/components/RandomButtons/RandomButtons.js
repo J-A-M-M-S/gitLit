@@ -3,37 +3,41 @@ import "./RandomButtons.css";
 
 // Assign on click to each liquor button using the data name as a value to pass into the getCocktail function
 
-function RandomButtons({
-  liquorSearch,
-  handleInputChange,
-  searchLiquor,
-  totalSurprise,
-}) {
+function RandomButtons({ searchLiquor, surpriseCocktail }) {
   return (
     <div>
       {/* Totally Random Button*/}
-      <button id="surpriseBtn" type="submit" onClick={totalSurprise}>
+      <button id="surpriseBtn" onClick={() => surpriseCocktail()}>
         Surprise Me
       </button>
 
       {/* Liquor Based Random Buttons */}
       <button
         id="vodkaBtn"
-        type="submit"
-        onClick={searchLiquor}
-        value={liquorSearch}
-        onChange={handleInputChange}
+        value="vodka"
+        onClick={(e) => searchLiquor(e.target.value)}
       >
         Vodka
       </button>
-      {/* Will mimic the vodka button once that is working */}
-      <button id="whiskeyBtn" type="submit">
+      <button
+        id="whiskeyBtn"
+        value="whiskey"
+        onClick={(e) => searchLiquor(e.target.value)}
+      >
         Whiskey
       </button>
-      <button id="tequilaBtn" type="submit">
+      <button
+        id="tequilaBtn"
+        value="tequila"
+        onClick={(e) => searchLiquor(e.target.value)}
+      >
         Tequila
       </button>
-      <button id="rumBtn" type="submit">
+      <button
+        id="rumBtn"
+        value="rum"
+        onClick={(e) => searchLiquor(e.target.value)}
+      >
         Rum
       </button>
     </div>
