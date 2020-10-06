@@ -13,7 +13,10 @@ const Roulette = () => {
   const searchLiquor = (value) => {
     console.log(value);
     API.searchFromLiquor(value).then((results) => {
-      setdata(results.data);
+      // setdata(results.data);
+      API.drinkInfo(results.data).then((results) => {
+        setSurpriseSearch(results.data);
+      });
     });
   };
   // API call to get selected drinks details
