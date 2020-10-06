@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import API from "../../utils/api";
 
-function FavoriteList() {
+function FavoriteList({ drinkDeets }) {
   const [newListFav, setnewListFav] = useState([]);
   const { user } = useAuth0();
   useEffect(() => {
@@ -20,7 +20,9 @@ function FavoriteList() {
   //   console.log(results);
   return (
     <div>
-      Favorite List
+      <h2 id="title" style={{ justifyContent: "center" }}>
+        Favorites List
+      </h2>
       <ul>
         {/* pulls cocktails matching the input and renders them as buttons */}
         {newListFav.map((drink, index) => (
@@ -28,7 +30,7 @@ function FavoriteList() {
             <button
               id="drinkBtn"
               key={drink.id}
-              // onClick={() => drinkDeets(drink.id)}
+              onClick={() => drinkDeets(drink.id)}
             >
               {drink.name}
             </button>
