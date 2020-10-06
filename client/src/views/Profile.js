@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
 import { useAuth0 } from "@auth0/auth0-react";
 // import { AiOutlineHeart } from "react-icons/ai";
-import API from "../utils/api";
+// import API from "../utils/api";
 import FavoriteList from "../components/FavoriteList/FavoriteList";
 
 export const Profile = () => {
