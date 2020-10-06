@@ -5,8 +5,7 @@ import DrinkDetails from "../components/DrinkDetails/DrinkDetails";
 
 const Roulette = () => {
   //  Sets state for drink and ingredient searches
-  const [data, setdata] = useState([]);
-  // const [deetsSearch, setDeetsSearch] = useState({});
+  const [data] = useState([]);
   const [surpriseSearch, setSurpriseSearch] = useState({});
 
   // API call to find all cocktails matching input
