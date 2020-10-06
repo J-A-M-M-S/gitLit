@@ -19,14 +19,25 @@ function RandomButtons({ searchLiquor, surpriseCocktail }) {
       >
         Vodka
       </button>
-      {/* Will mimic the vodka button once that is working */}
-      <button id="whiskeyBtn" type="submit">
+      <button
+        id="whiskeyBtn"
+        value="whiskey"
+        onClick={(e) => searchLiquor(e.target.value)}
+      >
         Whiskey
       </button>
-      <button id="tequilaBtn" type="submit">
+      <button
+        id="tequilaBtn"
+        value="tequila"
+        onClick={(e) => searchLiquor(e.target.value)}
+      >
         Tequila
       </button>
-      <button id="rumBtn" type="submit">
+      <button
+        id="rumBtn"
+        value="rum"
+        onClick={(e) => searchLiquor(e.target.value)}
+      >
         Rum
       </button>
     </div>
