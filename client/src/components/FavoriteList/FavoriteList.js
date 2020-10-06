@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import API from "../../utils/api";
-import { Document } from "mongoose";
 
 function FavoriteList() {
   const [newListFav, setnewListFav] = useState([]);
