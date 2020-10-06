@@ -6,9 +6,9 @@ function FavoriteList() {
   const [newListFav, setnewListFav] = useState([]);
   const { user } = useAuth0();
   useEffect(() => {
-    API.getFav(user.name).then((results) => {
+    API.getFav(user.email).then((results) => {
       setnewListFav(results.data);
-      console.log("favuser", user.name);
+      console.log("favuser", user.email);
       console.log("favresults", results);
     });
   }, []);
