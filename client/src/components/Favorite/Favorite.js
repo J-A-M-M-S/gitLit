@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./Favorite.css";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
 import API from "../../utils/api";
 //import DrinkDetails from "../components/DrinkDetails/DrinkDetails";
 import { useAuth0 } from "@auth0/auth0-react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import "./Favorite.css";
 
 function Favorite(favDetails) {
   const [newFav, setnewFav] = useState(false);
@@ -18,14 +18,14 @@ function Favorite(favDetails) {
   };
   if (newFav) {
     return (
-      <button onClick={saveFavorite}>
-        <FontAwesomeIcon icon={faStar} size="2x" />
+      <button id="favBtn" onClick={saveFavorite}>
+        <AiFillHeart />
       </button>
     );
   }
   return (
-    <button onClick={saveFavorite}>
-      <FontAwesomeIcon icon={faStar} size="1x" />
+    <button id="favBtn" onClick={saveFavorite}>
+      <AiOutlineHeart />
     </button>
   );
 }
