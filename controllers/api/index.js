@@ -104,9 +104,10 @@ router.get("/roulette/random", ({ params }, res) => {
         // Target ID
         let randomSurpriseID = randomSurprise.idDrink;
         console.log(randomSurprise);
+        res.send(randomSurpriseID);
+        return randomSurpriseID;
         // // Passes Cocktail ID to drink deets function
         // drinkDeets(randomSurpriseID);
-        res.send(randomSurpriseID);
       } else {
         console.log("This is still broken");
         res.send("nothing found");
