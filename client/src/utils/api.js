@@ -47,7 +47,7 @@ export default {
 
   getFav: function (userid) {
     if (userid) {
-      return axios.get(
+      return axios.post(
         process.env.REACT_APP_BACKEND_ROUTE + "/api/api/getfavorites",
         {
           id: userid,

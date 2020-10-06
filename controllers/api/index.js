@@ -183,11 +183,11 @@ router.post("/api/savfavorites", (req, res) => {
     });
 });
 
-router.get("/api/getfavorites", (req, res) => {
+router.post("/api/getfavorites", (req, res) => {
   console.log("body", req);
   db.find({
-    // id: req.body.id,
-    id: "juanlajara001@gmail.com",
+    id: req.body.id,
+    // id: "juanlajara001@gmail.com",
   })
 
     .then((dbFavorites) => {
