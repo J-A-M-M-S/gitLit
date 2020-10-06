@@ -3,6 +3,7 @@ import { Container, Col, Row } from "react-bootstrap";
 import { useAuth0 } from "@auth0/auth0-react";
 import { AiOutlineHeart } from "react-icons/ai";
 import API from "../utils/api";
+import "../components/Search/Search.css";
 
 export const Profile = () => {
   const { user } = useAuth0();
@@ -12,6 +13,7 @@ export const Profile = () => {
     e.preventDefault();
     console.log(user);
     setnewListFav(API.getFav(user.email));
+    console.log(setnewListFav);
     // console.log("The link was clicked.");
   };
 
