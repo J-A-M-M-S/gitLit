@@ -12,7 +12,6 @@ const Roulette = () => {
   const searchLiquor = (value) => {
     console.log(value);
     API.searchFromLiquor(value).then((results) => {
-      console.log("WOW IT RAN");
       setdata(results.data);
     });
   };
