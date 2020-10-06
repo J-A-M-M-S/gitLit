@@ -100,16 +100,45 @@ router.get("/roulette/random", ({ params }, res) => {
     .get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
     .then((results) => {
       if (results.data.drinks) {
-        let randomSurprise = results.data.drinks;
-        // Target ID
-        let randomSurpriseID = randomSurprise.idDrink;
-        console.log(randomSurprise);
-        res.send(randomSurpriseID);
-        return randomSurpriseID;
-        // // Passes Cocktail ID to drink deets function
-        // drinkDeets(randomSurpriseID);
+        let randomSurprise = results.data.drinks[0];
+        const surpriseDetails = {
+          id: randomSurprise.idDrink,
+          name: randomSurprise.strDrink,
+          instructions: randomSurprise.strInstructions,
+          image: randomSurprise.strDrinkThumb,
+          ing1: randomSurprise.strIngredient1,
+          ing2: randomSurprise.strIngredient2,
+          ing3: randomSurprise.strIngredient3,
+          ing4: randomSurprise.strIngredient4,
+          ing5: randomSurprise.strIngredient5,
+          ing6: randomSurprise.strIngredient6,
+          ing7: randomSurprise.strIngredient7,
+          ing8: randomSurprise.strIngredient8,
+          ing9: randomSurprise.strIngredient9,
+          ing10: randomSurprise.strIngredient10,
+          ing11: randomSurprise.strIngredient11,
+          ing12: randomSurprise.strIngredient12,
+          ing13: randomSurprise.strIngredient13,
+          ing14: randomSurprise.strIngredient14,
+          ing15: randomSurprise.strIngredient15,
+          measure1: randomSurprise.strMeasure1,
+          measure2: randomSurprise.strMeasure2,
+          measure3: randomSurprise.strMeasure3,
+          measure4: randomSurprise.strMeasure4,
+          measure5: randomSurprise.strMeasure5,
+          measure6: randomSurprise.strMeasure6,
+          measure7: randomSurprise.strMeasure7,
+          measure8: randomSurprise.strMeasure8,
+          measure9: randomSurprise.strMeasure9,
+          measure10: randomSurprise.strMeasure10,
+          measure11: randomSurprise.strMeasure11,
+          measure12: randomSurprise.strMeasure12,
+          measure13: randomSurprise.strMeasure13,
+          measure14: randomSurprise.strMeasure14,
+          measure15: randomSurprise.strMeasure15,
+        };
+        res.json(surpriseDetails);
       } else {
-        console.log("This is still broken");
         res.send("nothing found");
       }
     });

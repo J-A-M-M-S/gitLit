@@ -6,7 +6,8 @@ import DrinkDetails from "../components/DrinkDetails/DrinkDetails";
 const Roulette = () => {
   //  Sets state for drink and ingredient searches
   const [data, setdata] = useState([]);
-  const [deetsSearch, setDeetsSearch] = useState({});
+  // const [deetsSearch, setDeetsSearch] = useState({});
+  const [surpriseSearch, setSurpriseSearch] = useState({});
 
   // API call to find all cocktails matching input
   const searchLiquor = (value) => {
@@ -16,16 +17,16 @@ const Roulette = () => {
     });
   };
   // API call to get selected drinks details
-  const drinkDeets = (id) => {
-    API.drinkInfo(id).then((results) => {
-      setDeetsSearch(results.data);
-    });
-  };
+  // const drinkDeets = (id) => {
+  //   API.drinkInfo(id).then((results) => {
+  //     setDeetsSearch(results.data);
+  //   });
+  // };
 
   const surpriseCocktail = () => {
-    console.log("where is my drink?");
     API.totalSurprise().then((results) => {
-      setdata(results.data);
+      setSurpriseSearch(results.data);
+      console.log(surpriseSearch);
     });
   };
   return (
@@ -34,10 +35,10 @@ const Roulette = () => {
       <RandomButtons
         data={data}
         searchLiquor={searchLiquor}
-        drinkDeets={drinkDeets}
+        // drinkDeets={drinkDeets}
         surpriseCocktail={surpriseCocktail}
       />
-      <DrinkDetails details={deetsSearch} />
+      <DrinkDetails details={surpriseSearch} />
     </div>
   );
 };
