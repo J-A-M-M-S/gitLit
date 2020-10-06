@@ -184,12 +184,15 @@ router.post("/api/savfavorites", (req, res) => {
 });
 
 router.get("/api/getfavorites", (req, res) => {
-  console.log(req.body.id);
+  console.log("body", req);
   db.find({
-    id: req.body.id,
+    // id: req.body.id,
+    id: "juanlajara001@gmail.com",
   })
+
     .then((dbFavorites) => {
       res.json(dbFavorites);
+      // console.log(dbFavorites);
     })
     .catch((err) => {
       res.json(err);
