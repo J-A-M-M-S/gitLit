@@ -95,6 +95,7 @@ router.get("/search/drinksearch/:id", ({ params }, res) => {
 });
 
 // API call to get totally random cocktail
+// TODO DRY UP WITH BACK TO BACK API CALLS
 router.get("/roulette/random", ({ params }, res) => {
   axios
     .get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
