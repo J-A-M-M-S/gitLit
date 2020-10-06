@@ -18,7 +18,7 @@ export const Profile = () => {
   // };
 
   return (
-    <Container className="mb-5">
+    <Container style={{ color: "white" }} className="mb-5">
       <Row className="align-items-center profile-header mb-5 text-center text-md-left">
         <Col md={2}>
           <img

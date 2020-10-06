@@ -8,14 +8,34 @@ function FavoriteList() {
   useEffect(() => {
     API.getFav(user.email).then((results) => {
       setnewListFav(results.data);
-      console.log("favuser", user.email);
-      console.log("favresults", results);
+      //   console.log("favuser", user.email);
+      //   console.log("favresults", results);
+      //   console.log("fav data", newListFav);
     });
   }, []);
+  console.log("fav data", newListFav);
   //   console.log(newListFav);
   //   setnewListFav(API.getFav(user.email));
   //   console.log(setnewListFav);
   //   console.log(results);
-  return <div>test</div>;
+  return (
+    <div>
+      Favorite List
+      <ul>
+        {/* pulls cocktails matching the input and renders them as buttons */}
+        {newListFav.map((drink, index) => (
+          <li key={index}>
+            <button
+              id="drinkBtn"
+              key={drink.id}
+              // onClick={() => drinkDeets(drink.id)}
+            >
+              {drink.name}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 export default FavoriteList;
