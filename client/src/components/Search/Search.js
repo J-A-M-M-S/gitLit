@@ -22,7 +22,7 @@ function Search({
           <Col id="searchBox">
             <InputGroup className="mb-3">
               <FormControl
-                placeholder="Search"
+                placeholder="Search a cocktail name"
                 aria-label="Search"
                 aria-describedby="basic-addon2"
                 type="text"

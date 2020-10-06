@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import API from "../utils/api";
 import RandomButtons from "../components/RandomButtons/RandomButtons";
 import DrinkDetails from "../components/DrinkDetails/DrinkDetails";
+import "./Roulette.css";
 
 const Roulette = () => {
   //  Sets state for drink and ingredient searches
-  const [data, setdata] = useState([]);
-  // const [deetsSearch, setDeetsSearch] = useState({});
+  const [data] = useState([]);
   const [surpriseSearch, setSurpriseSearch] = useState({});
 
   // API call to find all cocktails matching input
@@ -25,7 +25,7 @@ const Roulette = () => {
   };
   return (
     <div>
-      <h1>Don't know what you want?</h1>
+      <h1 className="flavorText">Don't know what you want?</h1>
       <RandomButtons
         data={data}
         searchLiquor={searchLiquor}
